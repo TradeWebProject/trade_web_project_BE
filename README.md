@@ -17,7 +17,9 @@
 <img src="https://github.com/mmmv41/shopping-mall-product/assets/156222089/b1763923-e224-4012-8f06-6a6e3707c56d" width="700" height="350">
 
 ***
-<h2>✅ merge 후 사용이 끝난 branch는 즉시 삭제 </h2>
+<h2>📌 Commit 규칙</h2>
+
+<h4>✅ merge 후 사용이 끝난 branch는 즉시 삭제 </h4>
 
 
 
