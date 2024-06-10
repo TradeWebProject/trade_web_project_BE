@@ -9,9 +9,12 @@ import com.github.tradewebproject.Dto.User.UserDto;
 
 import com.github.tradewebproject.repository.Jwt.TokenRepository;
 import com.github.tradewebproject.repository.User.UserRepository;
+import com.github.tradewebproject.util.FileStorageUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,6 +23,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -34,6 +38,12 @@ public class UserServiceImpl implements UserService {
     private final JwtProvider jwtProvider;
     private final PasswordEncoder encoder;
 
+    @Value("${UPLOAD_DIR}")
+    private String uploadDir;
+
+    @Autowired
+    private FileStorageUtil fileStorageUtil;
+
     @Override
     public String encodePassword(String password) { //패스워드 암호화
         return encoder.encode(password);
@@ -46,7 +56,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public UserDto register(NewUserDto userDto) {
+    public UserDto register(NewUserDto userDto) throws IOException {
 
         //email 중복 검사
         if (userRepository.findByEmail(userDto.getEmail()) != null) {
@@ -55,12 +65,19 @@ public class UserServiceImpl implements UserService {
 
         String password = encodePassword(userDto.getUserPassword());
 
+        String imagePath = null;
+        if (userDto.getUserImg() != null && !userDto.getUserImg().isEmpty()) {
+            imagePath = fileStorageUtil.storeFile(userDto.getUserImg());
+        }
+
+
         UserDto newUser = UserDto.builder()
                 .email(userDto.getEmail())
                 .userPassword(password)
                 .userNickname(userDto.getUserNickname())
                 .userPhone(userDto.getUserPhone())
-                .userImg(userDto.getUserImg())
+                .userInterests(userDto.getUserInterests())
+                .userImg(imagePath)
                 .build();
 
         log.info("회원가입에 성공했습니다.");

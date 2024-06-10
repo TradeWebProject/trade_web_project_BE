@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -28,6 +29,9 @@ public class NewUserDto {   //유효성 검사 추가
     @Pattern(regexp = "^01[0|1|6|7|8|9][0-9]{7,8}$", message = "핸드폰 번호 형식에 맞게 입력해 주세요 ex)01012345678")
     private String userPhone;
 
-    private String userImg;
+    @NotBlank(message = "관심 분야를 입력해주세요.")
+    private String userInterests;
+
+    private MultipartFile userImg;
 
 }
