@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TradeWebProjectApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(TradeWebProjectApplication.class, args);
     }
 
