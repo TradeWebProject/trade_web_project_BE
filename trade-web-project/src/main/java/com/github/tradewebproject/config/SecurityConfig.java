@@ -77,5 +77,4 @@ public class SecurityConfig {
         encoders.put(idForEncode, new BCryptPasswordEncoder());
         return new DelegatingPasswordEncoder(idForEncode, encoders);
     }
-
 }
