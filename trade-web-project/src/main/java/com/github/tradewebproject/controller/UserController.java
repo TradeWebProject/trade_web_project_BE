@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @Slf4j
 @RequestMapping("/api") //내부에 선언한 메서드의 URL 리소스 앞에 @RequestMapping의 값이 공통 값으로 추가됨.
@@ -22,39 +23,50 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/signup")
-    public ResponseEntity<?> join(@Validated @RequestBody NewUserDto userDto, BindingResult result) {
-        try{
+    @PostMapping("/users/signup")
+    public ResponseEntity<?> join(
+            @RequestParam("email") String email,
+            @RequestParam("password") String userPassword,
+            @RequestParam("nickname") String userNickname,
+            @RequestParam("phone") String userPhone,
+            @RequestParam("interests") String userInterests,
+            @RequestParam("userImg") MultipartFile userImg) {
 
-            if (!isValidEmail(userDto.getEmail())) {
-                result.rejectValue("email", "email.invalid", "이메일 형식에 맞게 입력하세요.");
+        try {
+            NewUserDto newUserDto = NewUserDto.builder()
+                    .email(email)
+                    .userPassword(userPassword)
+                    .userNickname(userNickname)
+                    .userPhone(userPhone)
+                    .userInterests(userInterests)
+                    .userImg(userImg)
+                    .build();
+
+            // 유효성 검사
+            if (!isValidEmail(newUserDto.getEmail())) {
                 log.info("이메일 형식에 맞게 입력하세요.");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("이메일 형식에 맞게 입력하세요.");
             }
 
-            if (!isValidPassword(userDto.getUserPassword())) {
-                result.rejectValue("password", "password.invalid", "비밀번호 형식에 맞게 입력해주세요.");
+            if (!isValidPassword(newUserDto.getUserPassword())) {
                 log.info("비밀번호 형식에 맞게 입력해주세요.");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("비밀번호 형식에 맞게 입력해주세요.");
             }
 
-            if (!isValidPhone(userDto.getUserPhone())) {
-                result.rejectValue("user_phone", "user_phone.invalid", "핸드폰 입력 형식에 맞게 입력해주세요.");
+            if (!isValidPhone(newUserDto.getUserPhone())) {
                 log.info("핸드폰 입력 형식에 맞게 입력해주세요.");
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("핸드폰 입력 형식에 맞게 입력해주세요.");
             }
 
-            UserDto saveUser = userService.register(userDto);
-
-            return ResponseEntity.status(HttpStatus.CREATED).body(UserResponse.of(saveUser));
-        }
-        catch (Exception e)
-        {
+            // 사용자 등록
+            UserDto savedUser = userService.register(newUserDto);
+            return ResponseEntity.status(HttpStatus.CREATED).body(UserResponse.of(savedUser));
+        } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
 
-    @PostMapping("/login")
+    @PostMapping("/users/login")
     public ResponseEntity<?> login(@RequestBody UserDto login) {
         try {
             String email = login.getEmail();
@@ -69,13 +81,13 @@ public class UserController {
         }
     }
 
-    @PostMapping("/logout")
+    @PostMapping("/users/logout")
     public ResponseEntity<?> logout(HttpServletRequest request, @RequestBody UserDto userDto) {
         String res = userService.logout(request, userDto.getEmail());
         return ResponseEntity.ok().body(res);
     }
 
-    @DeleteMapping("/unregister/{email}")
+    @DeleteMapping("/users/unregister/{email}")
     public ResponseEntity<String> unregister(@PathVariable String email) {
         userService.unregister(email);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("회원 탈퇴 되었습니다.");

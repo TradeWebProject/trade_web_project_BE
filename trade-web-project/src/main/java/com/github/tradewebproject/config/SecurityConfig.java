@@ -46,7 +46,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api").permitAll()    //모든 권한 허용
                         .requestMatchers("/api/**").permitAll()
-                        .requestMatchers("/api/signup").permitAll()
+                        .requestMatchers("/api/users/signup").permitAll()
                         .requestMatchers("/unregister").permitAll()
                         .requestMatchers("/unregister/**").permitAll()
                         .requestMatchers("/unregister/{user_email}").permitAll()

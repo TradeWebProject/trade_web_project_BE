@@ -5,39 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/ErrorMsg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAccessDeniedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtExceptionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/ResponseToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/Deleted.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/NewUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/AuditingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/AuditorAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/UserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/TokenEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Jwt/TokenJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Jwt/TokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Jwt/TokenRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/User/UserJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/User/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Jwt/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Jwt/JwtServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/util/FileStorageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/trade_web_project_BE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trade_web_project_BE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/NewUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/NewUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/User/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/User/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +31,27 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/trade-web-project">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="trade-web-project" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="trade-web-project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="trade-web-project" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -71,38 +68,72 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "0woo22"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/0woo22/trade_web_project_BE.git",
+    "accountId": "8d6f61f3-83fd-44bd-bd5a-a194452ea087"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2hSRnKRh85Tz10yhkAgdUsdvNwB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.trade-web-project 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TradeWebProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/minkyung/#5&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build trade-web-project.executor": "Run",
+    "Gradle.trade-web-project 빌드.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.TradeWebProjectApplication.executor": "Run",
+    "git-widget-placeholder": "userService",
+    "jdk.selected.JAVA_MODULE": "temurin-17",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="trade_web_project_BE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="trade_web_project_BE" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TradeWebProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="UPLOAD_DIR" value="D:\newImage" />
+      </envs>
       <module name="trade-web-project.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.tradewebproject.TradeWebProjectApplication" />
       <method v="2">
@@ -134,5 +165,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="초기 에러 방지" />
+    <option name="LAST_COMMIT_MESSAGE" value="초기 에러 방지" />
   </component>
 </project>
