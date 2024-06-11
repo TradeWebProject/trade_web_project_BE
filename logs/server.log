@@ -51,3 +51,230 @@ This generated password is for development use only. Your security configuration
 2024-06-11 19:20:43.099 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-11 19:20:43.102 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
 2024-06-11 19:20:43.107 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-12 00:32:13.010 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-12 00:32:13.038 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 20968 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-12 00:32:13.038 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-12 00:32:13.083 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-12 00:32:13.083 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-12 00:32:13.083 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-12 00:32:14.002 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 00:32:14.004 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 00:32:14.031 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 00:32:14.033 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 00:32:14.033 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
+2024-06-12 00:32:14.041 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 00:32:14.042 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 00:32:14.063 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2024-06-12 00:32:14.613 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-12 00:32:14.621 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-12 00:32:14.622 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-12 00:32:14.622 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 00:32:14.668 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-12 00:32:14.668 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1585 ms
+2024-06-12 00:32:14.695 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-12 00:32:14.893 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@544e722e
+2024-06-12 00:32:14.895 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-12 00:32:14.903 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-12 00:32:15.024 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 00:32:15.072 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 00:32:15.101 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-12 00:32:15.359 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 00:32:16.191 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 00:32:16.194 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 00:32:16.640 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 00:32:16.660 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: 4e1679db-1bac-40df-95e8-81d0d6e65c3d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-12 00:32:16.667 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-12 00:32:16.865 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d4b87ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57fd4ee0, org.springframework.security.web.context.SecurityContextHolderFilter@7c8d343d, org.springframework.security.web.header.HeaderWriterFilter@1e7db903, org.springframework.web.filter.CorsFilter@31421dda, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@1a2fcc9c, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@73927385, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a16264b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@530f4d4e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22b7f6f5, org.springframework.security.web.session.SessionManagementFilter@49c618e8, org.springframework.security.web.access.ExceptionTranslationFilter@5bc52362, org.springframework.security.web.access.intercept.AuthorizationFilter@3f4ca400]
+2024-06-12 00:32:17.000 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-12 00:32:17.237 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-12 00:32:17.254 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-12 00:32:17.265 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-12 00:32:17.273 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.621 seconds (process running for 5.224)
+2024-06-12 01:05:33.482 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 01:05:33.482 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-12 01:05:33.482 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 0 ms
+2024-06-12 01:05:33.497 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:05:33.950 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:16.166 [http-nio-8080-exec-7] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:16.385 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:16.604 [http-nio-8080-exec-9] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:16.844 [http-nio-8080-exec-10] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:17.032 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:17.204 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:17.391 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:17.608 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:17.833 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:18.052 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:18.255 [http-nio-8080-exec-7] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:18.442 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:18.630 [http-nio-8080-exec-9] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:18.850 [http-nio-8080-exec-10] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:19.084 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:19.287 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:19.475 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:19.693 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:19.929 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:20.132 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:20.366 [http-nio-8080-exec-7] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:20.569 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:20.762 [http-nio-8080-exec-9] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:20.949 [http-nio-8080-exec-10] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:21.168 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:21.371 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:21.590 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:21.845 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:22.064 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:22.251 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:22.486 [http-nio-8080-exec-7] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:22.736 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:22.914 [http-nio-8080-exec-9] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:23.117 [http-nio-8080-exec-10] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:23.648 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:23.900 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:24.103 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:24.275 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:24.463 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:24.681 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:24.871 [http-nio-8080-exec-7] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:25.074 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:25.308 [http-nio-8080-exec-9] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:25.511 [http-nio-8080-exec-10] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:07:25.761 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-12 01:53:36.561 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:53:36.565 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-12 01:53:36.645 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-12 01:57:32.557 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-12 01:57:32.590 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 8140 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-12 01:57:32.590 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-12 01:57:32.624 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-12 01:57:32.624 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-12 01:57:32.624 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-12 01:57:33.336 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 01:57:33.337 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 01:57:33.365 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 01:57:33.367 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 01:57:33.367 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 27 ms. Found 0 JDBC repository interfaces.
+2024-06-12 01:57:33.375 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 01:57:33.376 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 01:57:33.399 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2024-06-12 01:57:33.970 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-12 01:57:33.978 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-12 01:57:33.979 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-12 01:57:33.980 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 01:57:34.028 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-12 01:57:34.028 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1404 ms
+2024-06-12 01:57:34.054 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-12 01:57:34.191 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2ca29774
+2024-06-12 01:57:34.192 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-12 01:57:34.201 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-12 01:57:34.326 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 01:57:34.375 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-12 01:57:34.413 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-12 01:57:34.674 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 01:57:35.454 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 01:57:35.457 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:57:35.914 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 01:57:35.932 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: 9d69398e-d8ce-4b18-a8a6-fd7a1c512eb0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-12 01:57:35.939 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-12 01:57:36.132 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c453a4f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57fb7899, org.springframework.security.web.context.SecurityContextHolderFilter@5688a4b6, org.springframework.security.web.header.HeaderWriterFilter@4df313b1, org.springframework.web.filter.CorsFilter@4d6c5bc7, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@7fe6637d, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@1198a487, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d7ae0ba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38526931, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@746a73b9, org.springframework.security.web.session.SessionManagementFilter@3e892bc1, org.springframework.security.web.access.ExceptionTranslationFilter@3d6607ff, org.springframework.security.web.access.intercept.AuthorizationFilter@18d06eb0]
+2024-06-12 01:57:36.271 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-12 01:57:36.489 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-12 01:57:36.507 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-12 01:57:36.518 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-12 01:57:36.527 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.341 seconds (process running for 4.837)
+2024-06-12 01:57:48.173 [File Watcher] [34mINFO [0;39m [36mo.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener[0;39m - Restarting due to 45 class path changes (0 additions, 45 deletions, 0 modifications)
+2024-06-12 01:57:48.176 [Thread-5] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Stopping ProtocolHandler ["http-nio-8080"]
+2024-06-12 01:57:48.187 [Thread-5] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:57:48.190 [Thread-5] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-12 01:57:48.273 [Thread-5] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-12 01:57:54.038 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 8140 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-12 01:57:54.039 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-12 01:57:54.302 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 01:57:54.303 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 01:57:54.310 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 01:57:54.311 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 01:57:54.311 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-06-12 01:57:54.314 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 01:57:54.314 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 01:57:54.322 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2024-06-12 01:57:54.438 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-12 01:57:54.438 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-12 01:57:54.438 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 01:57:54.458 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-12 01:57:54.458 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 418 ms
+2024-06-12 01:57:54.469 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Starting...
+2024-06-12 01:57:54.517 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-3 - Added connection org.mariadb.jdbc.Connection@92d72e7
+2024-06-12 01:57:54.518 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Start completed.
+2024-06-12 01:57:54.518 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-12 01:57:54.550 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 01:57:54.553 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-12 01:57:54.562 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 01:57:54.641 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 01:57:54.641 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:57:54.782 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 01:57:54.792 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: ba4c2c72-dca8-4f8f-af2e-70fd8da49471
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-12 01:57:54.793 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-12 01:57:54.863 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f733e16, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bdef4e5, org.springframework.security.web.context.SecurityContextHolderFilter@59f4f739, org.springframework.security.web.header.HeaderWriterFilter@a7a46dc, org.springframework.web.filter.CorsFilter@15b50804, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@24747f82, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@ef25d17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@678d9e86, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f19780d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8f74151, org.springframework.security.web.session.SessionManagementFilter@6096ad15, org.springframework.security.web.access.ExceptionTranslationFilter@4e6e1534, org.springframework.security.web.access.intercept.AuthorizationFilter@1401ebbe]
+2024-06-12 01:57:54.906 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-12 01:57:54.982 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-12 01:57:54.994 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-12 01:57:54.999 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 0.99 seconds (process running for 23.309)
+2024-06-12 01:57:55.000 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.ConditionEvaluationDeltaLoggingListener[0;39m - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-06-12 01:59:29.726 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:59:29.726 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Shutdown initiated...
+2024-06-12 01:59:29.808 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Shutdown completed.
