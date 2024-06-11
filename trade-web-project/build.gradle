@@ -79,5 +79,6 @@ tasks.named('test') {
 }
 
 tasks.named('bootJar'){
-    mainClass = 'com/github/tradewebproject/TradeWebProjectApplication.java'
+    mainClass = 'com.github.tradewebproject.TradeWebProjectApplication'
+    destinationDirectory = file("${project.rootDir}/../trade-web-project/myjar")
 }

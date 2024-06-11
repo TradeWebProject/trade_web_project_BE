@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/trade-web-project.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/logback-spring-dev.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/logback-spring-local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/logback-spring-prod.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +91,7 @@
   "keyToString": {
     "Gradle.Build trade-web-project.executor": "Run",
     "Gradle.trade-web-project [bootJar].executor": "Run",
+    "Gradle.trade-web-project [clean].executor": "Run",
     "Gradle.trade-web-project 빌드.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -144,6 +138,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="trade-web-project [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/trade-web-project" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TradeWebProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="prod" />
       <envs>
@@ -157,11 +173,13 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.trade-web-project [bootJar]" />
+      <item itemvalue="Gradle.trade-web-project [clean]" />
       <item itemvalue="Spring Boot.TradeWebProjectApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.trade-web-project [bootJar]" />
+        <item itemvalue="Gradle.trade-web-project [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +207,7 @@
       <workItem from="1717918632683" duration="11844000" />
       <workItem from="1718011990551" duration="971000" />
       <workItem from="1718020376844" duration="547000" />
-      <workItem from="1718087064294" duration="3398000" />
+      <workItem from="1718087064294" duration="13180000" />
     </task>
     <servers />
   </component>
