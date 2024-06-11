@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="">
-
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/util/FileStorageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/trade_web_project_BE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trade_web_project_BE.iml" afterDir="false" />
-
-
-
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/User/UserServiceImpl.java" afterDir="false" />
-
+      <change afterPath="$PROJECT_DIR$/.idea/modules/trade-web-project.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/logback-spring-dev.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/logback-spring-local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/logback-spring-prod.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,12 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="trade-web-project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="trade-web-project" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
@@ -68,18 +72,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "0woo22"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;0woo22&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/0woo22/trade_web_project_BE.git",
-    "accountId": "8d6f61f3-83fd-44bd-bd5a-a194452ea087"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/0woo22/trade_web_project_BE.git&quot;,
+    &quot;accountId&quot;: &quot;8d6f61f3-83fd-44bd-bd5a-a194452ea087&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 1
@@ -90,10 +94,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build trade-web-project.executor": "Run",
+    "Gradle.trade-web-project [bootJar].executor": "Run",
     "Gradle.trade-web-project 빌드.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -102,7 +106,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.TradeWebProjectApplication.executor": "Run",
-    "git-widget-placeholder": "userService",
+    "git-widget-placeholder": "deploy",
     "jdk.selected.JAVA_MODULE": "temurin-17",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -115,26 +119,35 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
-
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="trade_web_project_BE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="trade_web_project_BE" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.trade-web-project [bootJar]">
+    <configuration name="trade-web-project [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/trade-web-project" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="TradeWebProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="prod" />
       <envs>
-        <env name="UPLOAD_DIR" value="D:\newImage" />
+        <env name="UPLOAD_DIR" value="C:\newImage" />
       </envs>
       <module name="trade-web-project.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.tradewebproject.TradeWebProjectApplication" />
@@ -142,6 +155,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.trade-web-project [bootJar]" />
+      <item itemvalue="Spring Boot.TradeWebProjectApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.trade-web-project [bootJar]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -167,6 +189,7 @@
       <workItem from="1717918632683" duration="11844000" />
       <workItem from="1718011990551" duration="971000" />
       <workItem from="1718020376844" duration="547000" />
+      <workItem from="1718087064294" duration="3398000" />
     </task>
     <servers />
   </component>
