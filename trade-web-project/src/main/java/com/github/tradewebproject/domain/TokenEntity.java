@@ -28,7 +28,7 @@ public class TokenEntity {
     private String refreshToken;
     private LocalDateTime accessTokenTime;
     private LocalDateTime refreshTokenTime;
-
+    private Long userId;
     private String userEmail;
 
     public static TokenEntity from(Token token) {
@@ -40,6 +40,7 @@ public class TokenEntity {
                 .refreshToken(token.getRefreshToken())
                 .refreshTokenTime(token.getRefreshTokenTime())
                 .userEmail(token.getUserEmail())
+                .userId(token.getUserId())
                 .build();
     }
 

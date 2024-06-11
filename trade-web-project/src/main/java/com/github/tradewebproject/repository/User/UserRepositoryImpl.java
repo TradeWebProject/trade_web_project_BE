@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Repository //db 연동을 처리하는 DAO 클래스
@@ -39,6 +40,10 @@ public class UserRepositoryImpl implements UserRepository{
         } else {
             return userDto.toDTO();
         }
+    }
+    @Override
+    public Optional<User> findByEmail2(String email) {
+        return Optional.ofNullable(userJpaRepository.findByEmail(email));
     }
 
     @Override

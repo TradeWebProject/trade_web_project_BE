@@ -4,7 +4,9 @@ import com.github.tradewebproject.Dto.Jwt.ResponseToken;
 import com.github.tradewebproject.Dto.User.NewUserDto;
 import com.github.tradewebproject.Dto.User.UserDto;
 import com.github.tradewebproject.Dto.Jwt.Token;
+import com.github.tradewebproject.Dto.User.getUserDto;
 import com.github.tradewebproject.service.User.UserService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +16,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Slf4j
 @RequestMapping("/api") //내부에 선언한 메서드의 URL 리소스 앞에 @RequestMapping의 값이 공통 값으로 추가됨.
@@ -33,12 +38,17 @@ public class UserController {
             @RequestParam("userImg") MultipartFile userImg) {
 
         try {
+            List<String> interestsList = Arrays.asList(userInterests.split(","));
+            if (interestsList.size() > 3) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("관심사는 최대 3개까지 입력할 수 있습니다.");
+            }
+
             NewUserDto newUserDto = NewUserDto.builder()
                     .email(email)
                     .userPassword(userPassword)
                     .userNickname(userNickname)
                     .userPhone(userPhone)
-                    .userInterests(userInterests)
+                    .userInterests(interestsList)
                     .userImg(userImg)
                     .build();
 
@@ -72,10 +82,7 @@ public class UserController {
             String email = login.getEmail();
             String password = login.getUserPassword();
             Token token = userService.login(email, password);
-            ResponseEntity.ok().body(ResponseToken.of(token));
-
-            return new ResponseEntity<>("로그인 되었습니다.", HttpStatus.CREATED);
-
+            return ResponseEntity.ok().body(ResponseToken.of(token));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
@@ -91,6 +98,22 @@ public class UserController {
     public ResponseEntity<String> unregister(@PathVariable String email) {
         userService.unregister(email);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("회원 탈퇴 되었습니다.");
+    }
+
+//    @GetMapping("/users/{userId}")
+//    @SecurityRequirement(name = "BearerAuth")
+//    public ResponseEntity<getUserDto> getUserById(@PathVariable Long userId) {
+//        getUserDto getuserDto = userService.getUserById(userId);
+//        if (getuserDto == null) {
+//            return ResponseEntity.notFound().build();
+//        }
+//        return ResponseEntity.ok(getuserDto);
+//    }
+
+    @GetMapping("/users/{userId}")
+    @SecurityRequirement(name = "BearerAuth")
+    public ResponseEntity<?> getUserById(@PathVariable Long userId) {
+        return userService.getUserById(userId);
     }
 
     //이메일 유효성 검사
