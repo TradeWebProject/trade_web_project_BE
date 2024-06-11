@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/resources/application-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +76,9 @@
     &quot;accountId&quot;: &quot;8d6f61f3-83fd-44bd-bd5a-a194452ea087&quot;
   }
 }</component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
+  </component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 1
@@ -115,7 +117,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.trade-web-project [bootJar]">
+  <component name="RunManager" selected="Spring Boot.TradeWebProjectApplication">
     <configuration name="trade-web-project [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,7 +209,7 @@
       <workItem from="1717918632683" duration="11844000" />
       <workItem from="1718011990551" duration="971000" />
       <workItem from="1718020376844" duration="547000" />
-      <workItem from="1718087064294" duration="13180000" />
+      <workItem from="1718087064294" duration="17201000" />
     </task>
     <servers />
   </component>
