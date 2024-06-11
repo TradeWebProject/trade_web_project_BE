@@ -70,11 +70,14 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 
 
-
     //mariadb
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:3.1.2'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.named('bootJar'){
+    mainClass = 'com/github/tradewebproject/TradeWebProjectApplication.java'
 }
