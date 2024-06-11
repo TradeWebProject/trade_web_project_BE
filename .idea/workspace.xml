@@ -118,7 +118,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.TradeWebProjectApplication">
+  <component name="RunManager" selected="Gradle.trade-web-project [bootJar]">
     <configuration name="trade-web-project [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

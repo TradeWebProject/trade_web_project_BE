@@ -197,3 +197,84 @@ This generated password is for development use only. Your security configuration
 2024-06-12 01:57:48.187 [Thread-5] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-12 01:57:48.190 [Thread-5] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
 2024-06-12 01:57:48.273 [Thread-5] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-12 01:57:54.038 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 8140 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-12 01:57:54.039 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-12 01:57:54.302 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 01:57:54.303 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 01:57:54.310 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 01:57:54.311 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 01:57:54.311 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-06-12 01:57:54.314 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 01:57:54.314 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 01:57:54.322 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2024-06-12 01:57:54.438 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-12 01:57:54.438 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-12 01:57:54.438 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12 01:57:54.458 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-12 01:57:54.458 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 418 ms
+2024-06-12 01:57:54.469 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Starting...
+2024-06-12 01:57:54.517 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-3 - Added connection org.mariadb.jdbc.Connection@92d72e7
+2024-06-12 01:57:54.518 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Start completed.
+2024-06-12 01:57:54.518 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-12 01:57:54.550 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 01:57:54.553 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-12 01:57:54.562 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 01:57:54.641 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 01:57:54.641 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:57:54.782 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 01:57:54.792 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: ba4c2c72-dca8-4f8f-af2e-70fd8da49471
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-12 01:57:54.793 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-12 01:57:54.863 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f733e16, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bdef4e5, org.springframework.security.web.context.SecurityContextHolderFilter@59f4f739, org.springframework.security.web.header.HeaderWriterFilter@a7a46dc, org.springframework.web.filter.CorsFilter@15b50804, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@24747f82, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@ef25d17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@678d9e86, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f19780d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8f74151, org.springframework.security.web.session.SessionManagementFilter@6096ad15, org.springframework.security.web.access.ExceptionTranslationFilter@4e6e1534, org.springframework.security.web.access.intercept.AuthorizationFilter@1401ebbe]
+2024-06-12 01:57:54.906 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-12 01:57:54.982 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-12 01:57:54.994 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-12 01:57:54.999 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 0.99 seconds (process running for 23.309)
+2024-06-12 01:57:55.000 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.ConditionEvaluationDeltaLoggingListener[0;39m - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-06-12 01:59:29.726 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 01:59:29.726 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Shutdown initiated...
+2024-06-12 01:59:29.808 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-3 - Shutdown completed.
