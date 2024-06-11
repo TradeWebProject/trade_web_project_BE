@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="" />
+    <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +116,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.TradeWebProjectApplication">
+  <component name="RunManager" selected="Gradle.trade-web-project [bootJar]">
     <configuration name="trade-web-project [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,6 +209,7 @@
       <workItem from="1718011990551" duration="971000" />
       <workItem from="1718020376844" duration="547000" />
       <workItem from="1718087064294" duration="24681000" />
+      <workItem from="1718129670591" duration="1594000" />
     </task>
     <servers />
   </component>
