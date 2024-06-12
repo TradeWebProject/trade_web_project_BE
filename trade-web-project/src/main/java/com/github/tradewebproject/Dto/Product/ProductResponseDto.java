@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,6 +25,7 @@ public class ProductResponseDto {
     private String imageUrl;
     private String userNickName;
     //private String productOption;
+    private String category;
     private Integer productStatus;
     private Date startDate;
     private Date endDate;
