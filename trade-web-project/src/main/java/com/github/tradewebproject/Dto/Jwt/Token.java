@@ -18,7 +18,7 @@ public class Token {
     private String refreshToken;
     private LocalDateTime accessTokenTime;
     private LocalDateTime refreshTokenTime;
-
+    private Long userId;
     private String userEmail;
 
     @Builder
@@ -28,7 +28,8 @@ public class Token {
                  String refreshToken,
                  String userEmail,
                  LocalDateTime accessTokenTime,
-                 LocalDateTime refreshTokenTime) {
+                 LocalDateTime refreshTokenTime,
+                 Long userId) {
         this.id = id;
         this.grantType = grantType;
         this.accessToken = accessToken;
@@ -36,6 +37,7 @@ public class Token {
         this.userEmail = userEmail;
         this.accessTokenTime = accessTokenTime;
         this.refreshTokenTime = refreshTokenTime;
+        this.userId = userId;
     }
 
     public static Token from(TokenEntity token){
@@ -47,6 +49,7 @@ public class Token {
                 .userEmail(token.getUserEmail())
                 .accessTokenTime(token.getAccessTokenTime())
                 .refreshTokenTime(token.getRefreshTokenTime())
+                .userId(token.getUserId())
                 .build();
     }
 
