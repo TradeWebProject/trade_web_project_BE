@@ -154,4 +154,13 @@ public class ProductController {
 //        productService.deleteProduct(productId, email, password);
 //        return "해당 물건이 성공적으로 삭제 되었습니다.";
 //    }
+
+    @GetMapping("/products")
+    @Operation(summary = "전체 상품조회", description = "전체 상품을 조회합니다.")
+    public ProductPageResponseDto getAllProducts(
+            @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
+            @Parameter(description = "페이지 당 상품 수") @RequestParam(defaultValue = "8") int size,
+            @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순, enddate: 종료일 오름차순)") @RequestParam(defaultValue = "endDate") String sort) {
+        return productService.getAllProducts(page, size, sort);
+    }
 }

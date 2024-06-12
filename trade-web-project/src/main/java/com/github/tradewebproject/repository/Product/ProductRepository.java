@@ -14,7 +14,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findById(Long productId);
     List<Product> findByUserUserId(Long userId);
     List<Product> findByEndDateAfterAndStartDateBeforeOrStartDate(Date endDate, Date startDate1, Date startDate2);
-
-
+    Page<Product> findAll(Pageable pageable);
     Page<Product> findByUserUserIdAndProductStatus(Long userId, int productStatus, Pageable pageable);
 }

@@ -56,7 +56,6 @@ public class ProductService {
     private UserJpaRepository userJpaRepository;
 
 
-
 //    public ProductPageResponseDto getAvailableProducts(int page, int size, String sort) {
 //        // 정렬 조건 설정
 //        Sort sortBy = Sort.by("price");
@@ -181,6 +180,7 @@ public class ProductService {
             //dto.setStock(product.getStock());
             dto.setUserNickName(product.getUser().getUserNickname());
             //dto.setProductOption(product.getProductOption());
+            dto.setCategory(product.getCategory());
             dto.setProductStatus(product.getProductStatus());
             dto.setStartDate(product.getStartDate());
             dto.setEndDate(product.getEndDate());
@@ -200,10 +200,7 @@ public class ProductService {
     }
 
 
-
-
-
-    public ProductDTO registerProduct(String email,ProductDTO productDTO) throws IOException {
+    public ProductDTO registerProduct(String email, ProductDTO productDTO) throws IOException {
         validateProductInfo(productDTO);
         User user = userRepository.findByEmail2(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -251,6 +248,7 @@ public class ProductService {
         // 등록된 상품 정보를 DTO로 변환하여 반환
         return new ProductDTO(registeredProduct);
     }
+
     private void validateProductInfo(ProductDTO productDTO) {
         // 필요한 모든 상품 정보가 입력되었는지 확인하는 로직 추가
         // 예: productName, price, startDate, endDate, description 등
@@ -331,6 +329,45 @@ public class ProductService {
         return new ProductDTO(updatedProduct);
     }
 
+    public ProductPageResponseDto getAllProducts(int page, int size, String sort) {
+        Sort sortBy = Sort.by("price");
+        if ("asc".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.ASC, "price");
+        } else if ("desc".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.DESC, "price");
+        } else if ("enddate".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.ASC, "endDate");
+        }
+
+        Pageable pageable = PageRequest.of(page -1, size, sortBy);
+        Page<Product> productsPage = productRepository.findAll(pageable);
+
+        List<ProductResponseDto> productDtos = productsPage.stream().map(product -> {
+            ProductResponseDto dto = new ProductResponseDto();
+            dto.setProductId(product.getProductId());
+            dto.setProductName(product.getProductName());
+            dto.setDescription(product.getDescription());
+            dto.setPrice(product.getPrice());
+            dto.setUserNickName(product.getUser().getUserNickname());
+            dto.setProductStatus(product.getProductStatus());
+            dto.setCategory(product.getCategory());
+            dto.setStartDate(product.getStartDate());
+            dto.setEndDate(product.getEndDate());
+
+            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            dto.setImageUrl(imageUrl);
+
+            return dto;
+        }).collect(Collectors.toList());
+
+        ProductPageResponseDto responseDto = new ProductPageResponseDto();
+        responseDto.setProducts(productDtos);
+        responseDto.setTotalPages(productsPage.getTotalPages());
+
+        return responseDto;
+    }
+}
+
     //    public void deleteProduct(Long productId, String email, String password) {
 //        // 사용자 찾기 (이메일로 조회)
 //        UserEntity user = userRepository.findByEmail2(email)
@@ -353,4 +390,3 @@ public class ProductService {
 //        // 상품 삭제
 //        productRepository.deleteById(productId);
 //    }
-}
