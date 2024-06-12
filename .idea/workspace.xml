@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Purchase/PurchaseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Purchase/PurchasePageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Purchase/PurchaseRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/PurchaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Purchase/PurchaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Purchase/PurchaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/trade-web-project.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/trade-web-project.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +84,6 @@
     &quot;accountId&quot;: &quot;8d6f61f3-83fd-44bd-bd5a-a194452ea087&quot;
   }
 }</component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="없음" />
-  </component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 1
@@ -101,7 +107,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.TradeWebProjectApplication.executor": "Run",
-    "git-widget-placeholder": "feature/minkyung/#27",
+    "git-widget-placeholder": "feature/minkyung/#27 병합 중",
     "jdk.selected.JAVA_MODULE": "temurin-17",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -116,21 +122,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunAnythingCache">
-    <myKeys>
-      <visibility group="Gradle 작업" flag="true" />
-      <visibility group="Grunt" flag="true" />
-      <visibility group="Gulp" flag="true" />
-      <visibility group="HTTP 요청" flag="true" />
-      <visibility group="Maven Goal" flag="true" />
-      <visibility group="Node.js" flag="true" />
-      <visibility group="Recent projects" flag="true" />
-      <visibility group="Run configurations" flag="true" />
-      <visibility group="npm" flag="true" />
-      <visibility group="yarn" flag="true" />
-    </myKeys>
-  </component>
-  <component name="RunManager" selected="Spring Boot.TradeWebProjectApplication">
+  <component name="RunManager" selected="Gradle.trade-web-project [bootJar]">
     <configuration name="trade-web-project [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -229,7 +221,7 @@
       <workItem from="1718129670591" duration="1594000" />
       <workItem from="1718131505713" duration="591000" />
       <workItem from="1718171968811" duration="4156000" />
-      <workItem from="1718179559431" duration="21941000" />
+      <workItem from="1718179559431" duration="2580000" />
     </task>
     <servers />
   </component>
