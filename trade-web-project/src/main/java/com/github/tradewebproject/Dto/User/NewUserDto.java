@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -30,7 +32,7 @@ public class NewUserDto {   //유효성 검사 추가
     private String userPhone;
 
     @NotBlank(message = "관심 분야를 입력해주세요.")
-    private String userInterests;
+    private List<String> userInterests;
 
     private MultipartFile userImg;
 

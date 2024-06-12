@@ -2,9 +2,11 @@ package com.github.tradewebproject.service.User;
 
 import com.github.tradewebproject.Dto.User.NewUserDto;
 import com.github.tradewebproject.Dto.User.UserDto;
+import com.github.tradewebproject.Dto.User.getUserDto;
 import com.github.tradewebproject.controller.UserResponse;
 import com.github.tradewebproject.Dto.Jwt.Token;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.ResponseEntity;
 
 import java.io.IOException;
 
@@ -20,5 +22,8 @@ public interface  UserService {
     public String logout(HttpServletRequest request, String email);
 
     UserResponse getByEmail(String email);
+    //    getUserDto getUserById(Long id);
+    ResponseEntity<?> getUserById(Long userId);
+
 
 }

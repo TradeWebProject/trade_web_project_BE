@@ -3,8 +3,8 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    username: root
-    password: 12341234
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.mariadb.jdbc.Driver # MariaDB JDBC 드라이버로 변경
     url: jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com:3306/project_3?useUnicode=true&characterEncoding=UTF-8 # jdbc:mysql -> jdbc:mariadb로 변경
   mvc:
@@ -46,10 +46,4 @@ upload:
   dir: ${UPLOAD_DIR}
 
 jwt:
-  548BVE2TX658G7S89G7H5487A12F254F9754DHE5R2HE6W49215G6487G47S2HJ5G8HAA98
-
-
-
-
-
-
+  secret-key: ${JWT_SECRET_KEY}

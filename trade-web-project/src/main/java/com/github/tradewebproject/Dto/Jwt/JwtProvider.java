@@ -46,7 +46,7 @@ public class JwtProvider {
         this.key = Keys.hmacShaKeyFor(keyBytes);
     }
 
-    public Token createToken(Authentication authentication, List<GrantedAuthority> authorities) {
+    public Token createToken(Authentication authentication, List<GrantedAuthority> authorities, Long user_Id) {
         Map<String, Object> claims = new HashMap<>();
         claims.put(AUTHORITIES_KEY, authorities.stream()
                 .map(GrantedAuthority::getAuthority)
@@ -56,13 +56,13 @@ public class JwtProvider {
 
         long now = (new Date()).getTime();
 
-        //AccessToken 생성 (30분)
-        Date accessTokenExpire = new Date(System.currentTimeMillis() + 1000 * 60 * 30);
+        // AccessToken 생성 (30분)
+        Date accessTokenExpire = new Date(now + 1000 * 60 * 5000);
         claims.put("exp", accessTokenExpire);
         String accessToken = createAccessToken(claims, accessTokenExpire);
 
-        //RefreshToken 생성 (1시간)
-        Date refreshTokenExpire = new Date(System.currentTimeMillis() + 1000 * 60 * 60);
+        // RefreshToken 생성 (1시간)
+        Date refreshTokenExpire = new Date(now + 1000 * 60 * 6000);
         claims.put("exp", refreshTokenExpire);
         String refreshToken = createRefreshToken(claims, refreshTokenExpire);
 
@@ -70,9 +70,10 @@ public class JwtProvider {
                 .grantType("Bearer ")
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
-                .accessTokenTime((accessTokenExpire.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime()))
-                .refreshTokenTime((refreshTokenExpire.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime()))
+                .accessTokenTime(accessTokenExpire.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime())
+                .refreshTokenTime(refreshTokenExpire.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime())
                 .userEmail(authentication.getName())
+                .userId(user_Id)  // 여기에서 userId를 설정합니다.
                 .build();
 
         log.info("token in JwtProvider : " + token);
