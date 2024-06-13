@@ -52,7 +52,7 @@ public class ProductController {
 //
     @GetMapping("/products/user/{userId}")
     @SecurityRequirement(name = "BearerAuth")
-    @Operation(summary = "사용자 ID로 상품 조회", description = "사용자 ID에 해당하는 사용자가 등록한 상품 목록을 조회합니다. 페이지와 정렬 방식에 따라 조회할 수 있습니다.")
+    @Operation(summary = "등록된 상품조회", description = "사용자가 등록한 상품 목록을 조회합니다. 페이지와 정렬 방식에 따라 조회할 수 있습니다.")
     public ProductPageResponseDto getProductsByUserId(
             @Parameter(description = "사용자 ID") @PathVariable Long userId,
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
@@ -163,4 +163,5 @@ public class ProductController {
             @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순, enddate: 종료일 오름차순)") @RequestParam(defaultValue = "endDate") String sort) {
         return productService.getAllProducts(page, size, sort);
     }
+
 }
