@@ -1702,3 +1702,903 @@ This generated password is for development use only. Your security configuration
 2024-06-13 15:05:38.486 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-13 15:05:38.489 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
 2024-06-13 15:05:38.578 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 18:40:16.413 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 18:40:16.444 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 14452 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 18:40:16.444 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 18:40:16.476 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 18:40:16.477 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 18:40:16.477 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 18:40:17.752 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 18:40:17.754 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 18:40:17.786 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:40:17.788 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:40:17.789 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:40:17.790 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:40:17.790 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2024-06-13 18:40:17.799 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 18:40:17.800 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 18:40:17.833 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2024-06-13 18:40:18.436 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 18:40:18.445 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 18:40:18.446 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 18:40:18.446 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 18:40:18.497 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 18:40:18.498 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 2020 ms
+2024-06-13 18:40:18.529 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 18:40:18.681 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@69a9a19
+2024-06-13 18:40:18.683 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 18:40:18.693 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 18:40:18.823 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 18:40:18.888 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 18:40:18.924 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 18:40:19.208 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 18:40:20.140 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 18:40:20.143 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 18:40:20.634 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 18:40:20.652 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: e032c9b9-501b-4c1d-9a5a-8b38bfd0862e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 18:40:20.658 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 18:40:20.875 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63ffcb31, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@365d7c3b, org.springframework.security.web.context.SecurityContextHolderFilter@5b42ec96, org.springframework.security.web.header.HeaderWriterFilter@661c78f2, org.springframework.web.filter.CorsFilter@6244361a, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@6f44d436, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@193ff066, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@183b7570, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cb75fe3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4841633, org.springframework.security.web.session.SessionManagementFilter@5846fcc2, org.springframework.security.web.access.ExceptionTranslationFilter@62a878eb, org.springframework.security.web.access.intercept.AuthorizationFilter@41d294a9]
+2024-06-13 18:40:21.016 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 18:40:21.244 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 18:40:21.262 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 18:40:21.272 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 18:40:21.280 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 5.245 seconds (process running for 5.803)
+2024-06-13 18:40:39.462 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 18:40:39.462 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 18:40:39.464 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 2 ms
+2024-06-13 18:40:39.488 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 18:40:39.772 [http-nio-8080-exec-2] [1;31mERROR[0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet][0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.NullPointerException: Cannot invoke "com.github.tradewebproject.domain.TokenEntity.getId()" because "token" is null
+	at com.github.tradewebproject.Dto.Jwt.Token.from(Token.java:45)
+	at com.github.tradewebproject.repository.Jwt.TokenRepositoryImpl.findByAccessToken(TokenRepositoryImpl.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.github.tradewebproject.repository.Jwt.TokenRepositoryImpl$$SpringCGLIB$$0.findByAccessToken(<generated>)
+	at com.github.tradewebproject.service.Jwt.JwtServiceImpl.checkAccessTokenValid(JwtServiceImpl.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.github.tradewebproject.service.Jwt.JwtServiceImpl$$SpringCGLIB$$0.checkAccessTokenValid(<generated>)
+	at com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter.checkAccessTokenAndAuthentication(JwtAuthenticationFilter.java:72)
+	at com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter.doFilterInternal(JwtExceptionFilter.java:21)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-06-13 18:41:34.190 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 18:41:34.193 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-13 18:41:34.272 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 18:41:37.764 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 18:41:37.800 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 18060 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 18:41:37.801 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 18:41:37.847 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 18:41:37.847 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 18:41:37.847 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 18:41:38.603 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 18:41:38.605 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 18:41:38.633 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:41:38.635 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:41:38.635 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:41:38.636 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:41:38.637 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2024-06-13 18:41:38.646 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 18:41:38.647 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 18:41:38.671 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2024-06-13 18:41:39.232 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 18:41:39.239 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 18:41:39.241 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 18:41:39.241 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 18:41:39.286 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 18:41:39.286 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1438 ms
+2024-06-13 18:41:39.310 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 18:41:39.451 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@73635851
+2024-06-13 18:41:39.453 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 18:41:39.461 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 18:41:39.579 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 18:41:39.633 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 18:41:39.663 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 18:41:39.935 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 18:41:40.864 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 18:41:40.867 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 18:41:41.369 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 18:41:41.386 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: 268c56cc-acab-49b9-a374-54453393e39c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 18:41:41.392 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 18:41:41.590 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e4e6d08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42e6061a, org.springframework.security.web.context.SecurityContextHolderFilter@334f9180, org.springframework.security.web.header.HeaderWriterFilter@6889bb71, org.springframework.web.filter.CorsFilter@7b3a1728, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@2f1dd452, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@7e6c2c9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5002df2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ec4a10c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13a72873, org.springframework.security.web.session.SessionManagementFilter@3e744a81, org.springframework.security.web.access.ExceptionTranslationFilter@2c01f389, org.springframework.security.web.access.intercept.AuthorizationFilter@49d2b4d7]
+2024-06-13 18:41:41.731 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 18:41:41.947 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 18:41:41.964 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 18:41:41.975 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 18:41:41.984 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.678 seconds (process running for 5.209)
+2024-06-13 18:41:47.018 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 18:41:47.018 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 18:41:47.019 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2024-06-13 18:41:47.036 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 18:41:47.291 [http-nio-8080-exec-2] [1;31mERROR[0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet][0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.NullPointerException: Cannot invoke "com.github.tradewebproject.domain.TokenEntity.getId()" because "token" is null
+	at com.github.tradewebproject.Dto.Jwt.Token.from(Token.java:45)
+	at com.github.tradewebproject.repository.Jwt.TokenRepositoryImpl.findByAccessToken(TokenRepositoryImpl.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.github.tradewebproject.repository.Jwt.TokenRepositoryImpl$$SpringCGLIB$$0.findByAccessToken(<generated>)
+	at com.github.tradewebproject.service.Jwt.JwtServiceImpl.checkAccessTokenValid(JwtServiceImpl.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.github.tradewebproject.service.Jwt.JwtServiceImpl$$SpringCGLIB$$0.checkAccessTokenValid(<generated>)
+	at com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter.checkAccessTokenAndAuthentication(JwtAuthenticationFilter.java:72)
+	at com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter.doFilterInternal(JwtExceptionFilter.java:21)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-06-13 18:44:47.724 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 18:44:47.727 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-13 18:44:47.818 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 18:44:51.418 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 18:44:51.450 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 7600 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 18:44:51.451 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 18:44:51.483 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 18:44:51.484 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 18:44:51.484 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 18:44:52.281 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 18:44:52.282 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 18:44:52.311 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:44:52.312 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:44:52.313 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:44:52.314 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 18:44:52.315 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+2024-06-13 18:44:52.322 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 18:44:52.326 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 18:44:52.352 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2024-06-13 18:44:52.964 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 18:44:52.971 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 18:44:52.973 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 18:44:52.973 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 18:44:53.021 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 18:44:53.021 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1537 ms
+2024-06-13 18:44:53.046 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 18:44:53.187 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@347aa2fd
+2024-06-13 18:44:53.189 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 18:44:53.197 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 18:44:53.321 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 18:44:53.372 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 18:44:53.409 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 18:44:53.676 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 18:44:54.615 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 18:44:54.618 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 18:44:55.142 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 18:44:55.161 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: b415e57f-6e5f-4332-b7ee-1f69b5cc1c83
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 18:44:55.167 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 18:44:55.380 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15773b0d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36190901, org.springframework.security.web.context.SecurityContextHolderFilter@52aaef23, org.springframework.security.web.header.HeaderWriterFilter@744569a6, org.springframework.web.filter.CorsFilter@107f452, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@19d93a06, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@534476e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42e6061a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e6c2c9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f4790d3, org.springframework.security.web.session.SessionManagementFilter@1eaa404e, org.springframework.security.web.access.ExceptionTranslationFilter@61accf5d, org.springframework.security.web.access.intercept.AuthorizationFilter@3f6385df]
+2024-06-13 18:44:55.524 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 18:44:55.747 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 18:44:55.769 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 18:44:55.786 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 18:44:55.800 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.744 seconds (process running for 5.281)
+2024-06-13 18:45:03.067 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 18:45:03.067 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 18:45:03.068 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2024-06-13 18:45:03.086 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 18:45:03.354 [http-nio-8080-exec-1] [1;31mERROR[0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet][0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.NullPointerException: Cannot invoke "com.github.tradewebproject.domain.TokenEntity.getId()" because "token" is null
+	at com.github.tradewebproject.Dto.Jwt.Token.from(Token.java:45)
+	at com.github.tradewebproject.repository.Jwt.TokenRepositoryImpl.findByAccessToken(TokenRepositoryImpl.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.github.tradewebproject.repository.Jwt.TokenRepositoryImpl$$SpringCGLIB$$0.findByAccessToken(<generated>)
+	at com.github.tradewebproject.service.Jwt.JwtServiceImpl.checkAccessTokenValid(JwtServiceImpl.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.github.tradewebproject.service.Jwt.JwtServiceImpl$$SpringCGLIB$$0.checkAccessTokenValid(<generated>)
+	at com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter.checkAccessTokenAndAuthentication(JwtAuthenticationFilter.java:72)
+	at com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter.doFilterInternal(JwtExceptionFilter.java:21)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-06-13 18:45:08.678 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 18:45:52.300 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 18:45:52.342 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.service.Jwt.JwtServiceImpl[0;39m - userEmail : test3@naver.com
+2024-06-13 18:45:52.386 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.service.Jwt.JwtServiceImpl[0;39m - member : UserDto(userId=10, email=test3@naver.com, userPassword={bcrypt}$2a$10$tBstiU0FTeEfG9Fh.3yfSOyoG8F8AIEsFTbSKJD9rVFD8cyBXsjaC, userNickname=test3, userPhone=01033331111, userInterests=[가전, 의류, 전자기기], userImg=4b976a6a-4f5a-48da-91e0-2f8f8f39b3e2_PICT0056.jpg, role=USER, deleted=INUSE)
+2024-06-13 18:57:40.434 [http-nio-8080-exec-7] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 18:57:41.032 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 19:22:28.682 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 19:55:53.364 [http-nio-8080-exec-6] [34mINFO [0;39m [36mo.a.coyote.http11.Http11Processor[0;39m - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x040x010x00P0x000x000x000x010x00example.com0x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-06-13 20:16:19.008 [http-nio-8080-exec-8] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 20:40:21.245 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 20:40:21.255 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-13 20:40:21.341 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 20:40:25.131 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 20:40:25.186 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 19772 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 20:40:25.187 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 20:40:25.232 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 20:40:25.232 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 20:40:25.232 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 20:40:26.060 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 20:40:26.061 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 20:40:26.089 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:40:26.091 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:40:26.091 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:40:26.092 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:40:26.093 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
+2024-06-13 20:40:26.101 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 20:40:26.101 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 20:40:26.126 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2024-06-13 20:40:26.681 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 20:40:26.689 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 20:40:26.690 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 20:40:26.691 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 20:40:26.741 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 20:40:26.741 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1508 ms
+2024-06-13 20:40:26.768 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 20:40:26.900 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3ced3007
+2024-06-13 20:40:26.901 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 20:40:26.910 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 20:40:27.026 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 20:40:27.072 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 20:40:27.106 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 20:40:27.369 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 20:40:28.270 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 20:40:28.272 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 20:40:28.737 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 20:40:28.764 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: 70ef0df1-ee46-42c7-92a0-ce653f8cb168
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 20:40:28.773 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 20:40:29.019 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@365d7c3b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6244361a, org.springframework.security.web.context.SecurityContextHolderFilter@340dbbd0, org.springframework.security.web.header.HeaderWriterFilter@7988bc38, org.springframework.web.filter.CorsFilter@193ff066, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@61463fc7, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@4841633, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@405d3d22, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@553db69e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59e50e3c, org.springframework.security.web.session.SessionManagementFilter@62c9ca73, org.springframework.security.web.access.ExceptionTranslationFilter@1e349021, org.springframework.security.web.access.intercept.AuthorizationFilter@468259eb]
+2024-06-13 20:40:29.156 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 20:40:29.374 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 20:40:29.392 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 20:40:29.402 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 20:40:29.411 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.86 seconds (process running for 5.361)
+2024-06-13 20:43:26.832 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 20:43:26.833 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 20:43:26.834 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2024-06-13 20:43:26.850 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 20:51:45.717 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 20:51:45.721 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-13 20:51:45.799 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 20:51:48.903 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 20:51:48.933 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 19188 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 20:51:48.934 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 20:51:48.966 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 20:51:48.966 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 20:51:48.966 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 20:51:49.704 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 20:51:49.705 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 20:51:49.734 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:51:49.735 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:51:49.736 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:51:49.737 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 20:51:49.738 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces.
+2024-06-13 20:51:49.746 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 20:51:49.746 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 20:51:49.773 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2024-06-13 20:51:50.330 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 20:51:50.338 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 20:51:50.339 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 20:51:50.339 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 20:51:50.385 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 20:51:50.385 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1418 ms
+2024-06-13 20:51:50.410 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 20:51:50.536 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3540911c
+2024-06-13 20:51:50.538 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 20:51:50.546 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 20:51:50.665 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 20:51:50.714 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 20:51:50.747 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 20:51:50.984 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.004 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 20:51:51.032 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.095 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.178 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.295 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.496 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.851 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:51.926 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 20:51:51.929 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 20:51:52.432 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 20:51:52.451 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: c377b2af-a45a-4b2d-b282-4c1dc23b06d8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 20:51:52.458 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 20:51:52.537 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:52.662 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16aae7df, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a910447, org.springframework.security.web.context.SecurityContextHolderFilter@6fedc348, org.springframework.security.web.header.HeaderWriterFilter@3ce8011b, org.springframework.web.filter.CorsFilter@2ce63e16, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@2c1c167e, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@44e99522, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e8a300e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@614395ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53c067f, org.springframework.security.web.session.SessionManagementFilter@671eb4b3, org.springframework.security.web.access.ExceptionTranslationFilter@51c124a6, org.springframework.security.web.access.intercept.AuthorizationFilter@19e6ae3b]
+2024-06-13 20:51:52.798 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 20:51:53.020 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 20:51:53.038 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 20:51:53.048 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 20:51:53.057 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.493 seconds (process running for 4.976)
+2024-06-13 20:51:53.868 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:51:56.238 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 20:51:56.238 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 20:51:56.239 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2024-06-13 20:51:56.255 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 20:51:56.471 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:01.522 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:06.558 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:11.601 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:16.652 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:21.702 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:26.735 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:31.781 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:36.823 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:41.862 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:46.898 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:51.955 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:56.987 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:52:58.089 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 20:52:58.262 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.service.Jwt.JwtServiceImpl[0;39m - userEmail : test1@naver.com
+2024-06-13 20:52:58.304 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.t.service.Jwt.JwtServiceImpl[0;39m - member : UserDto(userId=7, email=test1@naver.com, userPassword={bcrypt}$2a$10$BhwpIdmd57Z0VsKzmK7BHOZeLM5xfwEI0Thsh/mof8F.oMgCAmvHe, userNickname=nickname1, userPhone=01011112222, userInterests=[clothes], userImg=41cb7de7-9c90-47ec-82bf-26dacc7e25be_PICT0056.jpg, role=USER, deleted=INUSE)
+2024-06-13 20:52:58.341 [http-nio-8080-exec-5] [31mWARN [0;39m [36mo.s.w.s.m.s.DefaultHandlerExceptionResolver[0;39m - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-06-13 20:53:02.030 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:07.066 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:12.113 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:16.655 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.D.Jwt.JwtAuthenticationFilter[0;39m - checkAccessTokenAndAuthentication() 호출
+2024-06-13 20:53:16.687 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.service.Jwt.JwtServiceImpl[0;39m - userEmail : test1@naver.com
+2024-06-13 20:53:16.709 [http-nio-8080-exec-6] [34mINFO [0;39m [36mc.g.t.service.Jwt.JwtServiceImpl[0;39m - member : UserDto(userId=7, email=test1@naver.com, userPassword={bcrypt}$2a$10$BhwpIdmd57Z0VsKzmK7BHOZeLM5xfwEI0Thsh/mof8F.oMgCAmvHe, userNickname=nickname1, userPhone=01011112222, userInterests=[clothes], userImg=41cb7de7-9c90-47ec-82bf-26dacc7e25be_PICT0056.jpg, role=USER, deleted=INUSE)
+2024-06-13 20:53:16.730 [http-nio-8080-exec-6] [31mWARN [0;39m [36mo.s.w.s.m.s.DefaultHandlerExceptionResolver[0;39m - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-06-13 20:53:17.149 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:22.202 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:27.235 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:32.276 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:37.311 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:42.352 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:47.391 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:52.450 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:53:57.484 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:02.527 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:07.576 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:12.617 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:17.663 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:22.722 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:27.760 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:32.809 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:37.847 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:42.886 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:47.935 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:52.992 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:54:58.030 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:03.064 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:08.102 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:13.142 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:18.187 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:23.255 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:28.303 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:33.338 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:38.379 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:43.431 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:48.478 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:53.536 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:55:58.586 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:03.620 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:08.660 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:13.707 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:18.746 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:23.822 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:28.869 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:33.917 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:38.963 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:44.000 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:49.036 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:54.110 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:56:59.153 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:04.191 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:09.227 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:14.268 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:19.309 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:24.372 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:29.417 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:34.452 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:39.503 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:44.539 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:49.582 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:54.649 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:57:59.697 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:04.738 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:09.779 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:14.828 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:19.871 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:24.924 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:29.972 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:35.010 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:40.045 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:45.090 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:50.133 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:58:55.202 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:00.243 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:05.281 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:10.328 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:15.371 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:20.407 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:25.471 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:30.513 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:35.560 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:40.598 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:45.634 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:50.680 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 20:59:55.744 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:00.792 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:05.830 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:10.869 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:15.913 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:20.957 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:26.020 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:31.052 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:36.092 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:41.131 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:46.174 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:51.211 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:00:56.276 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:01.347 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:06.387 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:11.430 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:16.468 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:21.510 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:26.581 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:31.610 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:36.662 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:41.714 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:46.750 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:51.797 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:01:56.849 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:01.883 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:02.311 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 21:02:02.314 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-13 21:02:06.891 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 21:02:09.992 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 21:02:10.022 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 21292 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 21:02:10.022 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 21:02:10.055 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 21:02:10.055 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 21:02:10.055 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 21:02:10.920 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 21:02:10.921 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 21:02:10.952 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:02:10.954 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:02:10.955 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:02:10.956 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:02:10.956 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+2024-06-13 21:02:10.965 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 21:02:10.966 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 21:02:10.994 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+2024-06-13 21:02:11.596 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 21:02:11.604 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 21:02:11.605 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 21:02:11.606 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 21:02:11.653 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 21:02:11.654 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1598 ms
+2024-06-13 21:02:11.680 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 21:02:11.819 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77ff3355
+2024-06-13 21:02:11.820 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 21:02:11.829 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 21:02:11.951 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 21:02:12.002 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 21:02:12.032 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 21:02:12.268 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:12.286 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 21:02:12.314 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:12.377 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:12.459 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:12.582 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:12.780 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:13.157 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:13.379 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 21:02:13.384 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 21:02:13.840 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:13.926 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 21:02:13.944 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: 67b7a659-622e-4999-b2b9-1923fc329c8e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 21:02:13.950 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 21:02:14.157 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@570e1072, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@750fac3c, org.springframework.security.web.context.SecurityContextHolderFilter@5819dc2c, org.springframework.security.web.header.HeaderWriterFilter@193ff066, org.springframework.web.filter.CorsFilter@54bf4f31, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@7ba0aeb0, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@779d11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@231b32c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a02d14f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@275d90ed, org.springframework.security.web.session.SessionManagementFilter@59e50e3c, org.springframework.security.web.access.ExceptionTranslationFilter@365d7c3b, org.springframework.security.web.access.intercept.AuthorizationFilter@500e55aa]
+2024-06-13 21:02:14.292 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 21:02:14.518 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 21:02:14.537 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 21:02:14.548 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 21:02:14.557 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.907 seconds (process running for 5.407)
+2024-06-13 21:02:15.169 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:17.763 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:18.610 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 21:02:18.610 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 21:02:18.611 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2024-06-13 21:02:22.810 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:27.847 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:32.891 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:37.936 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:42.987 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:48.034 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:53.072 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:02:58.120 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:03.161 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:08.198 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:13.265 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:18.305 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:23.357 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:28.400 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:33.448 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:38.484 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:43.545 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:48.585 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:53.629 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:03:58.671 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:03.709 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:08.746 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:13.814 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:18.854 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:23.896 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:28.937 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:33.977 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:39.012 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:44.071 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:49.115 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:54.164 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:04:59.204 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:04.240 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:09.280 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:14.347 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:19.386 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:24.427 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:29.473 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:34.522 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:39.573 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:44.632 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:49.684 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:54.720 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:05:59.769 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:04.809 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:09.850 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:14.913 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:19.950 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:24.989 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:30.031 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:35.069 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:40.113 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:45.176 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:50.213 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:06:52.502 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 21:06:52.505 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...
+2024-06-13 21:06:55.219 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown completed.
+2024-06-13 21:07:39.256 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-13 21:07:39.290 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Starting TradeWebProjectApplication using Java 17.0.11 with PID 14456 (C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE\trade-web-project\build\classes\java\main started by 밍경 in C:\Users\밍경\IdeaProjects\shop\trade_web_project_BE)
+2024-06-13 21:07:39.291 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - The following 1 profile is active: "prod"
+2024-06-13 21:07:39.328 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.restart.ChangeableUrls[0;39m - The Class-Path manifest attribute in C:\Users\밍경\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.1\dd6dda9da676a54c5b36ca2806ff95ee017d8738\jaxb-runtime-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/jaxb-api-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/txw2-2.3.1.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/istack-commons-runtime-3.0.7.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/stax-ex-1.8.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/FastInfoset-1.2.15.jar,file:/C:/Users/밍경/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.1/dd6dda9da676a54c5b36ca2806ff95ee017d8738/javax.activation-api-1.2.0.jar
+2024-06-13 21:07:39.329 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-13 21:07:39.329 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.e.DevToolsPropertyDefaultsPostProcessor[0;39m - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-13 21:07:40.055 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 21:07:40.056 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-13 21:07:40.084 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Jwt.TokenJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:07:40.086 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Product.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:07:40.086 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.Purchase.PurchaseRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:07:40.087 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationExtensionSupport[0;39m - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.github.tradewebproject.repository.User.UserJpaRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-13 21:07:40.088 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2024-06-13 21:07:40.095 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-13 21:07:40.098 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-13 21:07:40.123 [restartedMain] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2024-06-13 21:07:40.702 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2024-06-13 21:07:40.710 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-13 21:07:40.711 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2024-06-13 21:07:40.711 [restartedMain] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-13 21:07:40.760 [restartedMain] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2024-06-13 21:07:40.761 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1431 ms
+2024-06-13 21:07:40.786 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+2024-06-13 21:07:40.984 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6bba92
+2024-06-13 21:07:40.986 [restartedMain] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+2024-06-13 21:07:40.994 [restartedMain] [34mINFO [0;39m [36mo.s.b.a.h.H2ConsoleAutoConfiguration[0;39m - H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://database-1.c9k20iew29ah.ap-northeast-2.rds.amazonaws.com/project_3?user=root&password=***&useUnicode=true&characterEncoding=UTF-8'
+2024-06-13 21:07:41.115 [restartedMain] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-13 21:07:41.163 [restartedMain] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-13 21:07:41.198 [restartedMain] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2024-06-13 21:07:41.399 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:41.457 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:41.470 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-13 21:07:41.518 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:41.597 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:41.719 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:41.921 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:42.282 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:42.417 [restartedMain] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-13 21:07:42.419 [restartedMain] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 21:07:42.897 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration[0;39m - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-13 21:07:42.914 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.s.s.UserDetailsServiceAutoConfiguration[0;39m - 
+
+Using generated security password: 09d1640a-f698-43cb-950b-21c42d683fb5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-06-13 21:07:42.920 [restartedMain] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-06-13 21:07:42.967 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:43.125 [restartedMain] [34mINFO [0;39m [36mo.s.s.web.DefaultSecurityFilterChain[0;39m - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1eaa404e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49d2b4d7, org.springframework.security.web.context.SecurityContextHolderFilter@1dca7f0a, org.springframework.security.web.header.HeaderWriterFilter@65e83015, org.springframework.web.filter.CorsFilter@1605ec12, com.github.tradewebproject.Dto.Jwt.JwtExceptionFilter@118e391e, com.github.tradewebproject.Dto.Jwt.JwtAuthenticationFilter@52aaef23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58c4e949, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@334f9180, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e4e6d08, org.springframework.security.web.session.SessionManagementFilter@2c01f389, org.springframework.security.web.access.ExceptionTranslationFilter@3143dc69, org.springframework.security.web.access.intercept.AuthorizationFilter@ceb7894]
+2024-06-13 21:07:43.265 [restartedMain] [31mWARN [0;39m [36mo.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration[0;39m - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-13 21:07:43.482 [restartedMain] [34mINFO [0;39m [36mo.s.b.d.a.OptionalLiveReloadServer[0;39m - LiveReload server is running on port 35729
+2024-06-13 21:07:43.500 [restartedMain] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-13 21:07:43.511 [restartedMain] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2024-06-13 21:07:43.520 [restartedMain] [34mINFO [0;39m [36mc.g.t.TradeWebProjectApplication[0;39m - Started TradeWebProjectApplication in 4.697 seconds (process running for 5.193)
+2024-06-13 21:07:44.290 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:46.885 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:50.230 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-13 21:07:50.230 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2024-06-13 21:07:50.231 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2024-06-13 21:07:51.924 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:07:56.967 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:02.011 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:07.046 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:12.105 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:17.151 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:22.192 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:27.230 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:32.275 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:37.318 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:42.375 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:47.417 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:52.459 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:57.497 [HikariPool-1 connection adder] [31mWARN [0;39m [36mo.m.jdbc.message.server.ErrorPacket[0;39m - Error: 1040-08004: Too many connections
+2024-06-13 21:08:57.499 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-13 21:08:57.502 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Shutdown initiated...

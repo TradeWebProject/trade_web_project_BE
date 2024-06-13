@@ -1,8 +1,10 @@
 package com.github.tradewebproject.controller;
 
 
+import com.github.tradewebproject.Dto.Product.DetailProductDto;
 import com.github.tradewebproject.Dto.Product.ProductDTO;
 import com.github.tradewebproject.Dto.Product.ProductPageResponseDto;
+import com.github.tradewebproject.Dto.Product.ProductResponseDto;
 import com.github.tradewebproject.repository.User.UserRepository;
 import com.github.tradewebproject.service.Product.ProductService;
 import com.github.tradewebproject.util.FileStorageUtil;
@@ -13,8 +15,14 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import java.util.stream.Collectors;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -155,13 +163,21 @@ public class ProductController {
 //        return "해당 물건이 성공적으로 삭제 되었습니다.";
 //    }
 
-    @GetMapping("/products")
+    @GetMapping("/product")
     @Operation(summary = "전체 상품조회", description = "전체 상품을 조회합니다.")
     public ProductPageResponseDto getAllProducts(
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
             @Parameter(description = "페이지 당 상품 수") @RequestParam(defaultValue = "8") int size,
             @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순, enddate: 종료일 오름차순)") @RequestParam(defaultValue = "endDate") String sort) {
+
+
         return productService.getAllProducts(page, size, sort);
+    }
+
+    @GetMapping("/product/{productId}")
+    @Operation(summary = "상품 상세 조회", description = "상품 ID에 해당하는 상품의 상세 정보를 조회합니다.")
+    public DetailProductDto getProductById(@Parameter(description = "상품 ID") @PathVariable Long productId) {
+        return productService.getProductById(productId);
     }
 
 }
