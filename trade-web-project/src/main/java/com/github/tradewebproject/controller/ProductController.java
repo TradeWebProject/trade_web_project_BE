@@ -155,7 +155,7 @@ public class ProductController {
 //        return "해당 물건이 성공적으로 삭제 되었습니다.";
 //    }
 
-    @GetMapping("/products")
+    @GetMapping("/product")
     @Operation(summary = "전체 상품조회", description = "전체 상품을 조회합니다.")
     public ProductPageResponseDto getAllProducts(
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,

@@ -4,9 +4,11 @@ import com.github.tradewebproject.Dto.Product.ProductPageResponseDto;
 import com.github.tradewebproject.Dto.Product.ProductResponseDto;
 import com.github.tradewebproject.Dto.Purchase.PurchaseDto;
 import com.github.tradewebproject.Dto.Purchase.PurchasePageDto;
+import com.github.tradewebproject.domain.Like;
 import com.github.tradewebproject.domain.Product;
 import com.github.tradewebproject.domain.Purchase;
 import com.github.tradewebproject.domain.User;
+import com.github.tradewebproject.repository.Like.LikeRepository;
 import com.github.tradewebproject.repository.Product.ProductRepository;
 import com.github.tradewebproject.repository.Purchase.PurchaseRepository;
 import com.github.tradewebproject.repository.User.UserRepository;
@@ -35,6 +37,9 @@ public class PurchaseService {
 
     @Autowired
     private PurchaseRepository purchaseRepository;
+
+    @Autowired
+    private LikeRepository likeRepository;
 
     @Value("${UPLOAD_DIR}") // 환경변수로부터 업로드 디렉토리 경로를 가져옵니다.
     private String uploadDir;
@@ -107,6 +112,12 @@ public class PurchaseService {
             product.setPaymentDate(purchaseDate);
             product.setProductStatus(0);
             productRepository.save(product);
+
+            List<Like> likes = likeRepository.findByProductName(product.getProductName());
+            for (Like like : likes) {
+                like.setProductStatus(0);
+            }
+            likeRepository.saveAll(likes);
 
             return purchase.getPurchaseId();
         } else {
