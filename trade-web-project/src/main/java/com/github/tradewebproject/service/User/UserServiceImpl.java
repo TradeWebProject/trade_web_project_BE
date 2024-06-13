@@ -35,10 +35,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @RequiredArgsConstructor
 @Service    //비즈니스 로직을 처리하는 service 클래스
@@ -68,6 +65,7 @@ public class UserServiceImpl implements UserService {
         return encoder.matches(rawPassword, encodedPassword);
     }
 
+    // 회원가입
     @Override
     @Transactional
     public UserDto register(NewUserDto userDto) throws IOException {
@@ -184,6 +182,8 @@ public class UserServiceImpl implements UserService {
         log.info("role : " + authorities);
         return authorities;
     }
+
+
 
 //    @Override base64 인코딩한거
 //    public getUserDto getUserById(Long userId) {

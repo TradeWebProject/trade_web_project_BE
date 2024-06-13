@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public interface  UserService {
 
+
     String encodePassword(String password);
     boolean matchesPassword(String rawPassword, String encodedPassword);
 
@@ -24,6 +25,7 @@ public interface  UserService {
     UserResponse getByEmail(String email);
     //    getUserDto getUserById(Long id);
     ResponseEntity<?> getUserById(Long userId);
+
 
 
 }

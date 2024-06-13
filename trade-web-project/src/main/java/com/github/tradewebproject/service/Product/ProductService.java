@@ -1,5 +1,6 @@
 package com.github.tradewebproject.service.Product;
 
+import com.github.tradewebproject.Dto.Product.DetailProductDto;
 import com.github.tradewebproject.Dto.Product.ProductDTO;
 import com.github.tradewebproject.Dto.Product.ProductPageResponseDto;
 import com.github.tradewebproject.Dto.Product.ProductResponseDto;
@@ -365,6 +366,24 @@ public class ProductService {
         responseDto.setTotalPages(productsPage.getTotalPages());
 
         return responseDto;
+    }
+
+    public DetailProductDto getProductById(Long productId) {
+        return productRepository.findById(productId)
+                .map(product -> new DetailProductDto(
+                        product.getProductId(),
+                        product.getProductName(),
+                        product.getDescription(),
+                        product.getPrice(),
+                        product.getCategory(),
+                        product.getProductQuality(),
+                        product.getUser().getUserNickname(),
+                        product.getStartDate(),
+                        product.getEndDate(),
+                        product.getProductStatus(),
+                        product.getImagePaths()
+                ))
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 }
 

@@ -57,25 +57,11 @@ public class ProductDTO {
     private List<MultipartFile> files = new ArrayList<>();
     private List<String> imagePaths = new ArrayList<>(); // 이미지 경로 추가
 
-    //    // Product 엔티티에서 DTO로 변환하는 생성자
-//    public ProductDTO(Product product) {
-//        this.productId = product.getProductId();
-//        this.productName = product.getProductName();
-//        this.price = product.getPrice();
-//        this.stock = product.getStock();
-//        this.startDate = product.getStartDate();
-//        this.endDate = product.getEndDate();
-//        this.description = product.getDescription();
-//        this.productOption = product.getProductOption();
-//        this.userNickName = product.getUser().getUser_nickname();
-//        this.imagePaths = product.getImagePaths(); // 이미지 경로 설정
-//    }
+
     public ProductDTO(Product product) {
         this.productId = product.getProductId();
         this.productName = product.getProductName();
         this.price = product.getPrice();
-        //this.stock = product.getStock();
-        //this.productOption = product.getProductOption();
         this.startDate = product.getStartDate();
         this.endDate = product.getEndDate();
         this.description = product.getDescription();
@@ -84,4 +70,5 @@ public class ProductDTO {
         this.userNickName = product.getUser().getUserNickname();
         this.imagePaths = product.getImagePaths();
     }
+
 }
