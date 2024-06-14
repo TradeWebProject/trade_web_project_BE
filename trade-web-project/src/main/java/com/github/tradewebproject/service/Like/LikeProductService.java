@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -39,7 +40,7 @@ public class LikeProductService {
         this.likeRepository = likeRepository;
     }
 
-    public LikePageDto getPurchaseByUserId(Long userId, int page, int size, String sort) {
+    public LikePageDto getLikeByUserId(Long userId, int page, int size, String sort) {
 
         Sort sortBy = Sort.by("price");
         if (sort.equals("asc")) {
@@ -61,7 +62,7 @@ public class LikeProductService {
             dto.setSellerNickname(product.getProduct().getUser().getUserNickname());
             dto.setProductStatus(product.getProductStatus());
             // 이미지 파일 경로 설정
-            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            String imageUrl = product.getImageUrl();
             dto.setImageUrl(imageUrl);
 
             return dto;
@@ -75,7 +76,7 @@ public class LikeProductService {
     }
 
     @Transactional
-    public Long likeProduct(String email, Long productId) {
+    public Long toggleLikeProduct(String email, Long productId) {
         User user = userRepository.findByEmail2(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
         Product product = productRepository.findById(productId)
@@ -89,24 +90,23 @@ public class LikeProductService {
             throw new RuntimeException("판매중인 상품만 찜할 수 있습니다.");
         }
 
+        Optional<Like> existingLike = likeRepository.findByUserAndProduct_ProductId(user, productId);
+        if (existingLike.isPresent()) {
+            likeRepository.delete(existingLike.get());
+            return -1L; // 찜이 해제됨을 나타내기 위해 음수 값을 반환
+        } else {
+            Like like = new Like();
+            like.setUser(user);
+            like.setProductName(product.getProductName());
+            like.setPrice(product.getPrice());
+            like.setProductStatus(product.getProductStatus());
+            like.setProduct(product);
+            String imageUrl = "/images/" + product.getImageUrl();
+            like.setImageUrl(imageUrl);
 
-        boolean alreadyLiked = likeRepository.existsByUserAndProduct_ProductId(user, productId);
-        if (alreadyLiked) {
-            throw new RuntimeException("이미 찜한 상품입니다.");
+            like = likeRepository.save(like);
+            return like.getLikeProductId(); // 찜이 추가된 경우 likeProductId를 반환
         }
-
-        Like like = new Like();
-        like.setUser(user);
-        like.setProductName(product.getProductName());
-        like.setPrice(product.getPrice());
-        like.setProductStatus(product.getProductStatus());
-        like.setProduct(product);
-        String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
-        like.setImageUrl(imageUrl);
-
-        like = likeRepository.save(like);
-
-        return like.getLikeProductId();
     }
 
 

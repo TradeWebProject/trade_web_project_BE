@@ -28,15 +28,19 @@ public class LikeProductController {
 
     @PostMapping("/likes")
     @SecurityRequirement(name = "BearerAuth")
-    @Operation(summary = "상품 찜하기", description = "사용자가 상품을 찜합니다.")
+    @Operation(summary = "상품 찜하기/찜 해제", description = "사용자가 상품을 찜하거나 찜을 해제합니다.")
     public ResponseEntity<?> likeProduct(
             @RequestBody ProductLikeRequestDto request,
             Principal principal) {
         String userEmail = principal.getName();
-        Long likeProductId = likeProductService.likeProduct(userEmail, request.getProductId());
+        Long likeProductId = likeProductService.toggleLikeProduct(userEmail, request.getProductId());
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "상품이 정상적으로 찜되었습니다.");
-        response.put("likeProductId", likeProductId);
+        if (likeProductId == -1L) {
+            response.put("message", "상품 찜이 해제되었습니다.");
+        } else {
+            response.put("message", "상품이 정상적으로 찜되었습니다.");
+            response.put("likeProductId", likeProductId);
+        }
         return ResponseEntity.ok(response);
     }
 
@@ -48,6 +52,6 @@ public class LikeProductController {
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
             @Parameter(description = "페이지 당 상품 수(디폴트값 10개)") @RequestParam(defaultValue = "10") int size,
             @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순)") @RequestParam(defaultValue = "asc") String sort) {
-        return likeProductService.getPurchaseByUserId(userId, page, size, sort);
+        return likeProductService.getLikeByUserId(userId, page, size, sort);
     }
 }
