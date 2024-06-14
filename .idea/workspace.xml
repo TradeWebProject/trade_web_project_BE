@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81274a75-57d7-4676-9a98-b5729fa1ea6c" name="변경" comment="초기 에러 방지">
-      <change beforePath="$PROJECT_DIR$/trade-web-project/myjar/trade-web-project-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/myjar/trade-web-project-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Product/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Product/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +101,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.TradeWebProjectApplication.executor": "Run",
-    "git-widget-placeholder": "feature/minkyung/#47",
+    "git-widget-placeholder": "feature/minkyung/#49",
     "jdk.selected.JAVA_MODULE": "temurin-17",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",

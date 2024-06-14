@@ -74,9 +74,7 @@ public class ProductService {
             dto.setProductName(product.getProductName());
             dto.setDescription(product.getDescription());
             dto.setPrice(product.getPrice());
-            //dto.setStock(product.getStock());
             dto.setUserNickName(product.getUser().getUserNickname());
-            //dto.setProductOption(product.getProductOption());
             dto.setCategory(product.getCategory());
             dto.setProductStatus(product.getProductStatus());
             dto.setProductQuality(product.getProductQuality());
@@ -84,7 +82,7 @@ public class ProductService {
             dto.setEndDate(product.getEndDate());
 
             // 이미지 파일 경로 설정
-            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            String imageUrl = "/images/" + product.getImageUrl();
             dto.setImageUrl(imageUrl);
 
             return dto;
@@ -121,11 +119,9 @@ public class ProductService {
         product.setProductName(productDTO.getProductName());
         product.setPrice(productDTO.getPrice());
         product.setDescription(productDTO.getDescription());
-        //product.setStock(productDTO.getStock());
         product.setStartDate(productDTO.getStartDate());
         product.setEndDate(productDTO.getEndDate());
         product.setDescription(productDTO.getDescription());
-        //product.setProductOption(productDTO.getProductOption());
         product.setCategory(productDTO.getCategory());
         product.setProductQuality(productDTO.getProductQuality());
         product.setUser(user);
@@ -189,10 +185,8 @@ public class ProductService {
         product.setProductName(productDTO.getProductName());
         product.setPrice(productDTO.getPrice());
         product.setDescription(productDTO.getDescription());
-        //product.setStock(productDTO.getStock());
         product.setStartDate(productDTO.getStartDate());
         product.setEndDate(productDTO.getEndDate());
-        //product.setProductOption(productDTO.getProductOption());
         product.setCategory(productDTO.getCategory());
         product.setProductQuality(productDTO.getProductQuality());
 
@@ -254,7 +248,7 @@ public class ProductService {
             dto.setStartDate(product.getStartDate());
             dto.setEndDate(product.getEndDate());
 
-            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            String imageUrl = "/images/" + product.getImageUrl();
             dto.setImageUrl(imageUrl);
 
             return dto;
@@ -329,7 +323,7 @@ public class ProductService {
             dto.setStartDate(product.getStartDate());
             dto.setEndDate(product.getEndDate());
 
-            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            String imageUrl = "/images/" + product.getImageUrl();
             dto.setImageUrl(imageUrl);
 
             return dto;
@@ -342,5 +336,73 @@ public class ProductService {
         return responseDto;
     }
 
+
+    public ProductPageResponseDto getProductsByUserInterests(String email, int page, int size, String sort) {
+        User user = userRepository.findByEmail2(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        List<String> userInterests = user.getUserInterests();
+
+        // 정렬 방식 설정
+        Sort sortBy = Sort.by("price");
+        if (sort.equalsIgnoreCase("asc")) {
+            sortBy = Sort.by(Sort.Direction.ASC, "price");
+        } else if (sort.equalsIgnoreCase("desc")) {
+            sortBy = Sort.by(Sort.Direction.DESC, "price");
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, size, sortBy);
+        Page<Product> productsPage = productRepository.findByCategoryInAndProductStatus(userInterests, 1, pageable);
+
+        List<ProductResponseDto> productResponseDtos = productsPage.stream()
+                .map(product -> {
+                    String imageUrl = "/images/" + product.getImageUrl();
+                    return new ProductResponseDto(
+                            product.getProductId(),
+                            product.getProductName(),
+                            product.getDescription(),
+                            product.getPrice(),
+                            imageUrl,
+                            product.getUser().getUserNickname(),
+                            product.getCategory(),
+                            product.getProductStatus(),
+                            product.getStartDate(),
+                            product.getEndDate(),
+                            product.getPaymentDate()
+                    );
+                })
+                .collect(Collectors.toList());
+
+        ProductPageResponseDto productPageResponseDto = new ProductPageResponseDto();
+        productPageResponseDto.setProducts(productResponseDtos);
+        productPageResponseDto.setTotalPages(productsPage.getTotalPages());
+
+        return productPageResponseDto;
+    }
+
+//    public List<ProductResponseDto> getProductsByUserInterests(String email) {
+//        User user = userRepository.findByEmail2(email)
+//                .orElseThrow(() -> new RuntimeException("User not found"));
+//        List<String> userInterests = user.getUserInterests();
+//        List<Product> products = productRepository.findByCategoryIn(userInterests);
+//
+//        return products.stream()
+//                .map(product -> {
+//                    String imageUrl = "/images/" + product.getImageUrl();
+//                    return new ProductResponseDto(
+//                            product.getProductId(),
+//                            product.getProductName(),
+//                            product.getDescription(),
+//                            product.getPrice(),
+//                            imageUrl,
+//                            product.getUser().getUserNickname(),
+//                            product.getCategory(),
+//                            product.getProductStatus(),
+//                            product.getStartDate(),
+//                            product.getEndDate(),
+//                            product.getPaymentDate()
+//                    );
+//                })
+//                .collect(Collectors.toList());
+//    }
 
 }
