@@ -354,7 +354,6 @@ public class ProductService {
         Pageable pageable = PageRequest.of(page - 1, size, sortBy);
         Page<Product> productsPage = productRepository.findByCategoryInAndProductStatus(userInterests, 1, pageable);
 
-      
         List<ProductResponseDto> productResponseDtos = productsPage.stream()
                 .map(product -> {
                     String imageUrl = "/images/" + product.getImageUrl();
@@ -367,6 +366,7 @@ public class ProductService {
                             product.getUser().getUserNickname(),
                             product.getCategory(),
                             product.getProductStatus(),
+                            product.getProductQuality(),
                             product.getStartDate(),
                             product.getEndDate(),
                             product.getPaymentDate()
