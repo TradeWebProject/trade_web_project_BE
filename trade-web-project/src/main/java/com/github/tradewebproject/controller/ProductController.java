@@ -160,13 +160,17 @@ public class ProductController {
 
     @GetMapping("/product/search")
     @Operation(summary = "상품 검색", description = "상품 키워드(제목)에 맞는 상품을 조회합니다.")
-    public ResponseEntity<List<ProductDTO>> searchProducts(
+    public ResponseEntity<ProductPageResponseDto> searchProducts(
             @Parameter(description = "입력 키워드") @RequestParam String keyword,
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
-            @Parameter(description = "페이지 당 상품 수") @RequestParam(defaultValue = "10") int size,
-            @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순, enddate: 종료일 오름차순") @RequestParam(defaultValue = "asc") String sort) {
-        List<ProductDTO> products = productService.searchProducts(keyword, page, size, sort);
-        return ResponseEntity.ok(products);
+            @Parameter(description = "페이지 당 상품 수") @RequestParam(defaultValue = "8") int size,
+            @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순, enddate: 종료일 오름차순") @RequestParam(defaultValue = "asc") String sort,
+            @Parameter(description = "최소 가격") @RequestParam(required = false) Integer minPrice,
+            @Parameter(description = "최대 가격") @RequestParam(required = false) Integer maxPrice,
+            @Parameter(description = "카테고리") @RequestParam(required = false) String category,
+            @Parameter(description = "상품 상태(새상품, 중고상품)") @RequestParam(required = false) String status) {
+        ProductPageResponseDto responseDto = productService.searchProducts(keyword, page, size, sort, minPrice, maxPrice, category, status);
+        return ResponseEntity.ok(responseDto);
     }
 
     @GetMapping("/products/interests")

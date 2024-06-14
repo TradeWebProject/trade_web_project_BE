@@ -14,6 +14,4 @@ import java.util.List;
 public class ProductPageResponseDto {
     private List<ProductResponseDto> products;
     private int totalPages;
-
-
 }

@@ -5,6 +5,7 @@ import com.github.tradewebproject.Dto.Product.ProductDTO;
 import com.github.tradewebproject.Dto.Product.ProductPageResponseDto;
 import com.github.tradewebproject.Dto.Product.ProductResponseDto;
 import com.github.tradewebproject.domain.Product;
+import com.github.tradewebproject.domain.ProductSpecification;
 import com.github.tradewebproject.domain.User;
 import com.github.tradewebproject.repository.Product.ProductRepository;
 import com.github.tradewebproject.repository.User.UserJpaRepository;
@@ -16,6 +17,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -23,11 +25,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -51,10 +50,8 @@ public class ProductService {
     @Autowired
     private UserRepository userRepository;
 
-
     @Autowired
     private UserJpaRepository userJpaRepository;
-
 
 
     public ProductPageResponseDto getProductsByUserId(Long userId, int page, int size, String sort) {
@@ -81,6 +78,7 @@ public class ProductService {
             dto.setUserNickName(product.getUser().getUserNickname());
             dto.setCategory(product.getCategory());
             dto.setProductStatus(product.getProductStatus());
+            dto.setProductQuality(product.getProductQuality());
             dto.setStartDate(product.getStartDate());
             dto.setEndDate(product.getEndDate());
 
@@ -235,8 +233,8 @@ public class ProductService {
             sortBy = Sort.by(Sort.Direction.ASC, "endDate");
         }
 
-        Pageable pageable = PageRequest.of(page -1, size, sortBy);
-        Page<Product> productsPage = productRepository.findAll(pageable);
+        Pageable pageable = PageRequest.of(page - 1, size, sortBy);
+        Page<Product> productsPage = productRepository.findAllByProductStatus(1, pageable);
 
         List<ProductResponseDto> productDtos = productsPage.stream().map(product -> {
             ProductResponseDto dto = new ProductResponseDto();
@@ -246,6 +244,7 @@ public class ProductService {
             dto.setPrice(product.getPrice());
             dto.setUserNickName(product.getUser().getUserNickname());
             dto.setProductStatus(product.getProductStatus());
+            dto.setProductQuality(product.getProductQuality());
             dto.setCategory(product.getCategory());
             dto.setStartDate(product.getStartDate());
             dto.setEndDate(product.getEndDate());
@@ -298,7 +297,7 @@ public class ProductService {
     }
 
     // 상품 검색
-    public List<ProductDTO> searchProducts(String keyword, int page, int size, String sort) {
+    public ProductPageResponseDto searchProducts(String keyword, int page, int size, String sort, Integer minPrice, Integer maxPrice, String category, String status) {
         Sort sortBy = Sort.by("price");
         if ("asc".equalsIgnoreCase(sort)) {
             sortBy = Sort.by(Sort.Direction.ASC, "price");
@@ -309,28 +308,35 @@ public class ProductService {
         }
 
         Pageable pageable = PageRequest.of(page - 1, size, sortBy);
-        Page<Product> productsPage = productRepository.findByProductNameContaining(keyword, pageable);
+        Specification<Product> spec = ProductSpecification.filterProducts(keyword, minPrice, maxPrice, category, null);
+        Page<Product> productsPage = productRepository.findAll(spec, pageable);
 
-        return productsPage.stream().map(this::convertToDTO).collect(Collectors.toList());
+        List<ProductResponseDto> productDtos = productsPage.stream().map(product -> {
+            ProductResponseDto dto = new ProductResponseDto();
+            dto.setProductId(product.getProductId());
+            dto.setProductName(product.getProductName());
+            dto.setDescription(product.getDescription());
+            dto.setPrice(product.getPrice());
+            dto.setUserNickName(product.getUser().getUserNickname());
+            dto.setProductStatus(product.getProductStatus());
+            dto.setProductQuality(product.getProductQuality());
+            dto.setCategory(product.getCategory());
+            dto.setStartDate(product.getStartDate());
+            dto.setEndDate(product.getEndDate());
+
+            String imageUrl = "/images/" + product.getImageUrl();
+            dto.setImageUrl(imageUrl);
+
+            return dto;
+        }).collect(Collectors.toList());
+
+        ProductPageResponseDto responseDto = new ProductPageResponseDto();
+        responseDto.setProducts(productDtos);
+        responseDto.setTotalPages(productsPage.getTotalPages());
+
+        return responseDto;
     }
 
-    private ProductDTO convertToDTO(Product product) {
-        ProductDTO productDTO = new ProductDTO();
-        productDTO.setProductId(product.getProductId());
-        productDTO.setProductName(product.getProductName());
-        productDTO.setPrice(product.getPrice());
-        productDTO.setDescription(product.getDescription());
-        productDTO.setUserNickName(product.getUser().getUserNickname());
-        productDTO.setProductStatus(product.getProductStatus());
-        productDTO.setCategory(product.getCategory());
-        productDTO.setStartDate(product.getStartDate());
-        productDTO.setEndDate(product.getEndDate());
-
-        String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
-        productDTO.setImageUrl(imageUrl);
-
-        return productDTO;
-    }
 
     public ProductPageResponseDto getProductsByUserInterests(String email, int page, int size, String sort) {
         User user = userRepository.findByEmail2(email)
@@ -348,6 +354,7 @@ public class ProductService {
         Pageable pageable = PageRequest.of(page - 1, size, sortBy);
         Page<Product> productsPage = productRepository.findByCategoryInAndProductStatus(userInterests, 1, pageable);
 
+      
         List<ProductResponseDto> productResponseDtos = productsPage.stream()
                 .map(product -> {
                     String imageUrl = "/images/" + product.getImageUrl();
@@ -401,5 +408,4 @@ public class ProductService {
 //    }
 
 }
-
 
