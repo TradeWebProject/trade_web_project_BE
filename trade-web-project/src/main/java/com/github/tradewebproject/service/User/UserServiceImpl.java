@@ -259,13 +259,14 @@ public class UserServiceImpl implements UserService {
             return ResponseEntity.notFound().build();
         }
 
+        String baseImageUrl = "/images/";
         // getUserDto 생성
         getUserDto getuserDto = getUserDto.builder()
                 .email(userEntity.getEmail())
                 .user_nickname(userEntity.getUserNickname())
                 .user_phone(userEntity.getUserPhone())
                 .userInterests(userEntity.getUserInterests())
-                .user_img(Paths.get(uploadDir).resolve(userEntity.getUserImg()).normalize().toString()) // 파일 경로 추가
+                .user_img(baseImageUrl + userEntity.getUserImg())
                 .build();
 
         // JSON 응답을 위한 HttpHeaders 설정

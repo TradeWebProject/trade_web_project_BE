@@ -31,11 +31,6 @@ public class ProductDTO {
     @NotNull(message = "가격은 필수입니다.")
     private int price;
 
-//    @NotNull(message = "재고 입력은 필수입니다.")
-//    private int stock;
-
-//    @NotNull(message = "상품 옵션은 필수입니다.")
-//    private String productOption;
 
     @NotNull(message = "유저 닉네임은 필수입니다.")
     private String userNickName;

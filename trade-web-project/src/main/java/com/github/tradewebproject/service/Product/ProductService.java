@@ -53,6 +53,7 @@ public class ProductService {
     @Autowired
     private UserJpaRepository userJpaRepository;
 
+
     public ProductPageResponseDto getProductsByUserId(Long userId, int page, int size, String sort) {
 
         Sort sortBy = Sort.by("price");
@@ -267,7 +268,7 @@ public class ProductService {
                 .map(product -> {
                     List<String> imagePathUrl = new ArrayList<>();
                     for (String imagePath : product.getImagePaths()) {
-                        String imageUrl = Paths.get(uploadDir).resolve(imagePath).normalize().toString();
+                        String imageUrl = "/images/" + product.getImageUrl();
                         imagePathUrl.add(imageUrl);
                     }
 
@@ -353,6 +354,7 @@ public class ProductService {
         Pageable pageable = PageRequest.of(page - 1, size, sortBy);
         Page<Product> productsPage = productRepository.findByCategoryInAndProductStatus(userInterests, 1, pageable);
 
+      
         List<ProductResponseDto> productResponseDtos = productsPage.stream()
                 .map(product -> {
                     String imageUrl = "/images/" + product.getImageUrl();
@@ -406,3 +408,4 @@ public class ProductService {
 //    }
 
 }
+
