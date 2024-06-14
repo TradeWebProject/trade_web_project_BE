@@ -1,5 +1,6 @@
 package com.github.tradewebproject.service.Product;
 
+import com.github.tradewebproject.Dto.Product.DetailProductDto;
 import com.github.tradewebproject.Dto.Product.ProductDTO;
 import com.github.tradewebproject.Dto.Product.ProductPageResponseDto;
 import com.github.tradewebproject.Dto.Product.ProductResponseDto;
@@ -329,6 +330,7 @@ public class ProductService {
         return new ProductDTO(updatedProduct);
     }
 
+    // 전체 상품조회 (토큰 필요x)
     public ProductPageResponseDto getAllProducts(int page, int size, String sort) {
         Sort sortBy = Sort.by("price");
         if ("asc".equalsIgnoreCase(sort)) {
@@ -366,6 +368,76 @@ public class ProductService {
 
         return responseDto;
     }
+
+    // 상품 상세 조회
+    public DetailProductDto getProductById(Long productId) {
+        return productRepository.findById(productId)
+                .map(product -> {
+                    List<String> imagePathUrl = new ArrayList<>();
+                    for (String imagePath : product.getImagePaths()) {
+                        String imageUrl = Paths.get(uploadDir).resolve(imagePath).normalize().toString();
+                        imagePathUrl.add(imageUrl);
+                    }
+
+                    String thumbnailUrl = imagePathUrl.isEmpty() ? null : imagePathUrl.get(0);
+
+                    DetailProductDto dto = new DetailProductDto(
+                            product.getProductId(),
+                            product.getProductName(),
+                            product.getDescription(),
+                            product.getPrice(),
+                            product.getCategory(),
+                            product.getUser().getUserNickname(),
+                            product.getProductStatus(),
+                            product.getProductQuality(),
+                            product.getStartDate(),
+                            product.getEndDate(),
+                            thumbnailUrl,
+                            product.getImagePaths()
+                    );
+
+                    dto.setImagePathUrl(imagePathUrl);
+
+                    return dto;
+                })
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
+
+    // 상품 검색
+    public List<ProductDTO> searchProducts(String keyword, int page, int size, String sort) {
+        Sort sortBy = Sort.by("price");
+        if ("asc".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.ASC, "price");
+        } else if ("desc".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.DESC, "price");
+        } else if ("enddate".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.ASC, "endDate");
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, size, sortBy);
+        Page<Product> productsPage = productRepository.findByProductNameContaining(keyword, pageable);
+
+        return productsPage.stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
+    private ProductDTO convertToDTO(Product product) {
+        ProductDTO productDTO = new ProductDTO();
+        productDTO.setProductId(product.getProductId());
+        productDTO.setProductName(product.getProductName());
+        productDTO.setPrice(product.getPrice());
+        productDTO.setDescription(product.getDescription());
+        productDTO.setUserNickName(product.getUser().getUserNickname());
+        productDTO.setProductStatus(product.getProductStatus());
+        productDTO.setCategory(product.getCategory());
+        productDTO.setStartDate(product.getStartDate());
+        productDTO.setEndDate(product.getEndDate());
+
+        String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+        productDTO.setImageUrl(imageUrl);
+
+        return productDTO;
+    }
+
 }
 
     //    public void deleteProduct(Long productId, String email, String password) {
