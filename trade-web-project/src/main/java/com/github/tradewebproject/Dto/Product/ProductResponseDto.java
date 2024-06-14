@@ -13,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 
-// 전체 product 조회용 dto
 
 public class ProductResponseDto {
 
@@ -27,10 +26,9 @@ public class ProductResponseDto {
     //private String productOption;
     private String category;
     private Integer productStatus;
+    private String productQuality;
     private Date startDate;
     private Date endDate;
     private Date paymentDate;
-
-
 
 }
