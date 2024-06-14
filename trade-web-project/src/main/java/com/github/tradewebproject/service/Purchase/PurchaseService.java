@@ -66,7 +66,7 @@ public class PurchaseService {
             dto.setSellerNickname(product.getSellerNickname());
 
             // 이미지 파일 경로 설정
-            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            String imageUrl = "/images/" + product.getImageUrl();
             dto.setImageUrl(imageUrl);
 
             return dto;
@@ -102,7 +102,7 @@ public class PurchaseService {
             purchase.setPrice(product.getPrice());
 
 
-            String imageUrl = Paths.get(uploadDir).resolve(product.getImageUrl()).normalize().toString();
+            String imageUrl = product.getImageUrl();
             purchase.setImageUrl(imageUrl);
 
             purchase.setSellerNickname(product.getUser().getUserNickname());

@@ -21,10 +21,8 @@ public class ProductResponseDto {
     private String productName;
     private String description;
     private Integer price;
-    //private Integer stock;
     private String imageUrl;
     private String userNickName;
-    //private String productOption;
     private String category;
     private Integer productStatus;
     private Date startDate;

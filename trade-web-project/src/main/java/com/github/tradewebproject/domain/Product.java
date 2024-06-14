@@ -54,12 +54,6 @@ public class Product {
     @Temporal(TemporalType.DATE)
     private Date startDate;
 
-//    @Column(nullable = false)
-//    private Integer stock;
-
-//    @Column(name = "product_option", nullable = false, length = 255)
-//    private String productOption;
-
     @Column(name = "payment_date", nullable = true)
     @Temporal(TemporalType.DATE)
     private Date paymentDate;
