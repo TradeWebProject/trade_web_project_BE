@@ -18,8 +18,8 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea/workspace.xml
 .idea
+.idea/workspace.xml
 *.iws
 *.iml
 *.ipr
@@ -39,7 +39,5 @@ out/
 .vscode/
 
 ### Logs ###
-logs/server.log
-
 trade-web-project/myjar/logs/nohup.out
-
+logs/server.log
