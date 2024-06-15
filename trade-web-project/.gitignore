@@ -39,5 +39,4 @@ out/
 .vscode/
 
 ### Logs ###
-trade-web-project/myjar/logs/nohup.out
 logs/server.log
