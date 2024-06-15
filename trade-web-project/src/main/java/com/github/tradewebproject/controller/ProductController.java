@@ -161,7 +161,7 @@ public class ProductController {
     @GetMapping("/product/search")
     @Operation(summary = "상품 검색", description = "상품 키워드(제목)에 맞는 상품을 조회합니다.")
     public ResponseEntity<ProductPageResponseDto> searchProducts(
-            @Parameter(description = "입력 키워드") @RequestParam String keyword,
+            @Parameter(description = "입력 키워드") @RequestParam(required = false) String keyword,
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
             @Parameter(description = "페이지 당 상품 수") @RequestParam(defaultValue = "8") int size,
             @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순, enddate: 종료일 오름차순") @RequestParam(defaultValue = "asc") String sort,
