@@ -124,7 +124,7 @@ public class UserServiceImpl implements UserService {
                                 .refreshToken(token.getRefreshToken())
                                 .refreshTokenTime(token.getRefreshTokenTime())
                                 .userEmail(token.getUserEmail())
-                                .userId(userDto.getUserId())  // 여기에서 userId를 설정합니다.
+                                .userId(userDto.getUserId())
                                 .build();
                     }
                     log.info("로그인에 성공했습니다.");

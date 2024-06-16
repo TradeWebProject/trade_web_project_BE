@@ -2,6 +2,8 @@ package com.github.tradewebproject.controller;
 
 
 import com.github.tradewebproject.Dto.Review.ReviewResponseDto;
+import com.github.tradewebproject.Dto.Review.SellerReviewPageDto;
+import com.github.tradewebproject.Dto.Review.SellerReviewResponseDto;
 import com.github.tradewebproject.service.Review.ReviewService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -32,8 +34,7 @@ public class ReviewController {
         return ResponseEntity.ok(responseDTO);
     }
 
-    @GetMapping("/reviews/{userId}")
-    @SecurityRequirement(name = "BearerAuth")
+    @GetMapping("/reviews/user/{userId}")
     @Operation(summary = "사용자 리뷰 조회", description = "특정 사용자의 리뷰를 조회합니다.")
     public ResponseEntity<List<ReviewResponseDto>> getReviewsByUserId(@PathVariable Long userId) {
         List<ReviewResponseDto> reviews = reviewService.getReviewsByUserId(userId);
@@ -41,10 +42,16 @@ public class ReviewController {
     }
 
     @GetMapping("/reviews/product/{productId}")
-    @SecurityRequirement(name = "BearerAuth")
     @Operation(summary = "제품 리뷰 조회", description = "특정 제품의 리뷰를 조회합니다.")
     public ResponseEntity<List<ReviewResponseDto>> getReviewsByProductId(@PathVariable Long productId) {
         List<ReviewResponseDto> reviews = reviewService.getReviewsByProductId(productId);
         return ResponseEntity.ok(reviews);
+    }
+
+    @GetMapping("/reviews/seller/{sellerId}")
+    @Operation(summary = "판매자 리뷰 조회", description = "특정 판매자의 리뷰를 조회합니다.")
+    public ResponseEntity<SellerReviewPageDto> getReviewsBySellerId(@PathVariable Long sellerId) {
+        SellerReviewPageDto reviewSummary = reviewService.getReviewsBySellerId(sellerId);
+        return ResponseEntity.ok(reviewSummary);
     }
 }

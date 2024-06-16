@@ -4,10 +4,16 @@ import com.github.tradewebproject.Dto.Product.DetailProductDto;
 import com.github.tradewebproject.Dto.Product.ProductDTO;
 import com.github.tradewebproject.Dto.Product.ProductPageResponseDto;
 import com.github.tradewebproject.Dto.Product.ProductResponseDto;
+import com.github.tradewebproject.Dto.Review.ReviewResponseDto;
+import com.github.tradewebproject.Dto.Review.SellerReviewResponseDto;
 import com.github.tradewebproject.domain.Product;
 import com.github.tradewebproject.domain.ProductSpecification;
+import com.github.tradewebproject.domain.Review;
 import com.github.tradewebproject.domain.User;
+import com.github.tradewebproject.repository.Like.LikeRepository;
 import com.github.tradewebproject.repository.Product.ProductRepository;
+import com.github.tradewebproject.repository.Purchase.PurchaseRepository;
+import com.github.tradewebproject.repository.Review.ReviewRepository;
 import com.github.tradewebproject.repository.User.UserJpaRepository;
 import com.github.tradewebproject.repository.User.UserRepository;
 import com.github.tradewebproject.util.FileStorageUtil;
@@ -39,6 +45,9 @@ public class ProductService {
     private String uploadDir;
 
     @Autowired
+    private LikeRepository likeRepository;
+
+    @Autowired
     private FileStorageUtil fileStorageUtil;
 
     @Autowired
@@ -51,7 +60,13 @@ public class ProductService {
     private UserRepository userRepository;
 
     @Autowired
+    private PurchaseRepository purchaseRepository;
+
+    @Autowired
     private UserJpaRepository userJpaRepository;
+
+    @Autowired
+    private ReviewRepository reviewRepository;
 
 
     public ProductPageResponseDto getProductsByUserId(Long userId, int page, int size, String sort) {
@@ -78,6 +93,7 @@ public class ProductService {
             dto.setUserNickName(product.getUser().getUserNickname());
             dto.setCategory(product.getCategory());
             dto.setProductStatus(product.getProductStatus());
+            dto.setTotalLikes(likeRepository.countByProductProductId(product.getProductId()));
             dto.setProductQuality(product.getProductQuality());
             dto.setStartDate(product.getStartDate());
             dto.setEndDate(product.getEndDate());
@@ -244,6 +260,7 @@ public class ProductService {
             dto.setPrice(product.getPrice());
             dto.setUserNickName(product.getUser().getUserNickname());
             dto.setProductStatus(product.getProductStatus());
+            dto.setTotalLikes(likeRepository.countByProductProductId(product.getProductId()));
             dto.setProductQuality(product.getProductQuality());
             dto.setCategory(product.getCategory());
             dto.setStartDate(product.getStartDate());
@@ -268,11 +285,45 @@ public class ProductService {
                 .map(product -> {
                     List<String> imagePathUrl = new ArrayList<>();
                     for (String imagePath : product.getImagePaths()) {
-                        String imageUrl = "/images/" + product.getImageUrl();
+                        String imageUrl = "/images/" + imagePath; // 수정: imagePath를 사용하여 이미지 URL 생성
                         imagePathUrl.add(imageUrl);
                     }
 
                     String thumbnailUrl = imagePathUrl.isEmpty() ? null : imagePathUrl.get(0);
+
+                    // 리뷰 리스트 생성
+                    List<SellerReviewResponseDto> reviews = new ArrayList<>();
+                    String baseImageUrl = "/images/";
+                    List<Review> productReviews = reviewRepository.findByProduct(product); // 수정: products 리스트 대신 product 객체 사용
+                    for (Review review : productReviews) {
+                        reviews.add(new SellerReviewResponseDto(
+                                product.getProductName(),
+                                review.getReviewDate(),
+                                review.getUser().getUserNickname(),
+                                baseImageUrl + review.getUser().getUserImg(), // 이미지 경로에 base URL 추가
+                                review.getRating(),
+                                review.getReviewContent(),
+                                review.getReviewTitle()
+                        ));
+                    }
+
+                    // 총 찜 수 계산
+                    int totalLikes = likeRepository.countByProductProductId(productId);
+
+                    // 해당 물건을 등록한 유저의 총 리뷰 수 계산
+                    Long userId = product.getUser().getUserId();
+
+                    // Seller ID가 userId와 일치하는 리뷰 수 계산
+                    int totalUserReviews = reviewRepository.countBySellerId(userId);
+
+                    // Seller ID가 userId와 일치하는 리뷰들의 별점 평균 계산
+                    double averageRating = reviewRepository.findBySellerId(userId).stream()
+                            .mapToDouble(Review::getRating)
+                            .average()
+                            .orElse(0);
+
+                    // 해당 물건을 등록한 유저의 총 판매 수 계산
+                    int totalSales = purchaseRepository.countBySellerId(userId);
 
                     DetailProductDto dto = new DetailProductDto(
                             product.getProductId(),
@@ -290,6 +341,11 @@ public class ProductService {
                     );
 
                     dto.setImagePathUrl(imagePathUrl);
+                    dto.setReviews(reviews); // reviews 리스트를 설정
+                    dto.setTotalLikes(totalLikes);
+                    dto.setTotalRatings(totalUserReviews);
+                    dto.setTotalSales(totalSales);
+                    dto.setAverageRating(averageRating);
 
                     return dto;
                 })
@@ -319,6 +375,7 @@ public class ProductService {
             dto.setPrice(product.getPrice());
             dto.setUserNickName(product.getUser().getUserNickname());
             dto.setProductStatus(product.getProductStatus());
+            dto.setTotalLikes(likeRepository.countByProductProductId(product.getProductId()));
             dto.setProductQuality(product.getProductQuality());
             dto.setCategory(product.getCategory());
             dto.setStartDate(product.getStartDate());
@@ -357,6 +414,7 @@ public class ProductService {
         List<ProductResponseDto> productResponseDtos = productsPage.stream()
                 .map(product -> {
                     String imageUrl = "/images/" + product.getImageUrl();
+                    int totalLikes = likeRepository.countByProductProductId(product.getProductId());
                     return new ProductResponseDto(
                             product.getProductId(),
                             product.getProductName(),
@@ -366,6 +424,7 @@ public class ProductService {
                             product.getUser().getUserNickname(),
                             product.getCategory(),
                             product.getProductStatus(),
+                            totalLikes,
                             product.getProductQuality(),
                             product.getStartDate(),
                             product.getEndDate(),

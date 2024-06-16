@@ -15,7 +15,7 @@ public class ResponseToken {
     private String userEmail;
 
     private String accessToken;
-    private String refreshToken;
+//    private String refreshToken;
     private LocalDateTime accessTokenTime;
     private Long userId;
 
@@ -23,7 +23,7 @@ public class ResponseToken {
     public ResponseToken(String userEmail, String accessToken, String refreshToken, LocalDateTime accessTokenTime , Long userId) {
         this.userEmail = userEmail;
         this.accessToken = accessToken;
-        this.refreshToken = refreshToken;
+//        this.refreshToken = refreshToken;
         this.accessTokenTime = accessTokenTime;
         this.userId = userId;
     }
@@ -32,7 +32,7 @@ public class ResponseToken {
         return ResponseToken.builder()
                 .userEmail(token.getUserEmail())
                 .accessToken(token.getAccessToken())
-                .refreshToken(token.getRefreshToken())
+//                .refreshToken(token.getRefreshToken())
                 .accessTokenTime(token.getAccessTokenTime())
                 .userId(token.getUserId())
                 .build();

@@ -17,6 +17,7 @@ public class ReviewResponseDto {
     private Long userId;
     private Double rating;
     private Long reviewId;
+    private Long sellerId;
 
 
 

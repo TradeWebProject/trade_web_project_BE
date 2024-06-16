@@ -104,6 +104,7 @@ public class LikeProductService {
 
         LikePageDto responseDto = new LikePageDto();
         responseDto.setProducts(likeProductDtoList);
+        responseDto.setTotalLikes(likeProductDtoList.size());
         responseDto.setTotalPages(likePage.getTotalPages());
 
         return responseDto;

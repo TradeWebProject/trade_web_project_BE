@@ -42,4 +42,7 @@ public class Purchase {
 
     @Column(name = "seller_nickname", length = 255, nullable = false)
     private String sellerNickname;
+
+    @Column(name = "seller_id", length = 255)
+    private Long sellerId;
 }

@@ -24,6 +24,7 @@ public class ProductResponseDto {
     private String userNickName;
     private String category;
     private Integer productStatus;
+    private Integer totalLikes;
     private String productQuality;
     private Date startDate;
     private Date endDate;

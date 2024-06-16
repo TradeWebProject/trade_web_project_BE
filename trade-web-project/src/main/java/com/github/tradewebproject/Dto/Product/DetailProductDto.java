@@ -1,5 +1,7 @@
 package com.github.tradewebproject.Dto.Product;
 
+import com.github.tradewebproject.Dto.Review.ReviewResponseDto;
+import com.github.tradewebproject.Dto.Review.SellerReviewResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,6 +33,11 @@ public class DetailProductDto {
     private String thumbnailUrl;
     private List<String> imagePathUrl =  new ArrayList<>();
     private List<String> imagePaths = new ArrayList<>();
+    private List<SellerReviewResponseDto> reviews;
+    private int totalLikes;
+    private int totalRatings;
+    private int totalSales;
+    private double averageRating;
 
     public DetailProductDto(Long productId, String productName, String description, Integer price, String category, String userNickName, Integer productStatus,String productQuality, Date startDate, Date endDate ,String thumbNail, List<String> imagePaths) {
         this.productId = productId;

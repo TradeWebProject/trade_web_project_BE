@@ -13,4 +13,6 @@ public interface PurchaseRepository extends JpaRepository<Purchase, Long> {
     Page<Purchase> findByUserUserId(Long userId, Pageable pageable);
 
     Optional<Purchase> findByUserAndProduct(User user, Product product);
+
+    int countBySellerId(Long sellerId);
 }

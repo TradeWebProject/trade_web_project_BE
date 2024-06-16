@@ -46,4 +46,9 @@ public class Review {
     @Column(name = "review_date", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date reviewDate;
+
+    @Column(name = "seller_id")
+    private Long sellerId; // 새로운 필드 추가
+
+
 }
