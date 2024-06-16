@@ -44,8 +44,7 @@ public class LikeProductController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/likes/{userId}")
-    @SecurityRequirement(name = "BearerAuth")
+    @GetMapping("/likes/user/{userId}")
     @Operation(summary = "사용자의 찜 목록 조회", description = "특정 사용자의 찜한 상품 목록을 조회합니다.")
     public LikePageDto getPurchaseByUserId(
             @Parameter(description = "사용자 ID") @PathVariable Long userId,
@@ -56,7 +55,6 @@ public class LikeProductController {
     }
 
     @GetMapping("/likes/product/{productId}")
-    @SecurityRequirement(name = "BearerAuth")
     @Operation(summary = "상품의 찜 목록 조회", description = "특정 상품을 찜한 사용자 목록을 조회합니다.")
     public LikePageDto getLikesByProductId(
             @Parameter(description = "상품 ID") @PathVariable Long productId,

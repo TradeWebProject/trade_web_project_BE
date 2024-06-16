@@ -1,6 +1,7 @@
 package com.github.tradewebproject.repository.Product;
 
 import com.github.tradewebproject.domain.Product;
+import com.github.tradewebproject.domain.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    //Page<Product> findAllByStockGreaterThanAndProductStatus(int stock, int productStatus, Pageable pageable);
+
     Optional<Product> findById(Long productId);
     List<Product> findByUserUserId(Long userId);
     List<Product> findByEndDateAfterAndStartDateBeforeOrStartDate(Date endDate, Date startDate1, Date startDate2);
@@ -29,4 +30,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByCategoryIn(List<String> userInterests);
 
     Page<Product> findByCategoryInAndProductStatus(List<String> userInterests, int i, Pageable pageable);
+
+
+
 }

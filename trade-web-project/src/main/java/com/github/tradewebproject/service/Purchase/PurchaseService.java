@@ -11,6 +11,7 @@ import com.github.tradewebproject.domain.User;
 import com.github.tradewebproject.repository.Like.LikeRepository;
 import com.github.tradewebproject.repository.Product.ProductRepository;
 import com.github.tradewebproject.repository.Purchase.PurchaseRepository;
+import com.github.tradewebproject.repository.User.UserJpaRepository;
 import com.github.tradewebproject.repository.User.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class PurchaseService {
+
+    @Autowired
+    private UserJpaRepository userJpaRepository;
 
     @Autowired
     private UserRepository userRepository;
@@ -64,6 +68,8 @@ public class PurchaseService {
             dto.setProductName(product.getProduct().getProductName());
             dto.setPrice(product.getPrice());
             dto.setSellerNickname(product.getSellerNickname());
+            dto.setSellerId(product.getSellerId());
+
 
             // 이미지 파일 경로 설정
             String imageUrl = "/images/" + product.getImageUrl();
@@ -108,6 +114,8 @@ public class PurchaseService {
             purchase.setSellerNickname(product.getUser().getUserNickname());
             purchase = purchaseRepository.save(purchase);
 
+            purchase.setSellerId(product.getUser().getUserId());
+            purchase = purchaseRepository.save(purchase);
 
             product.setPaymentDate(purchaseDate);
             product.setProductStatus(0);

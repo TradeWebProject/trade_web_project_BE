@@ -24,4 +24,5 @@ public class PurchaseDto {
     private String imageUrl;
     private Integer price;
     private String sellerNickname;
+    private Long sellerId;
 }

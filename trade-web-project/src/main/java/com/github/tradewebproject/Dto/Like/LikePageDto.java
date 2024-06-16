@@ -16,5 +16,6 @@ import java.util.List;
 @Setter
 public class LikePageDto {
     private List<LikeProductDto> products;
+    private int totalLikes;
     private int totalPages;
 }
