@@ -39,4 +39,12 @@ public class ReviewController {
         List<ReviewResponseDto> reviews = reviewService.getReviewsByUserId(userId);
         return ResponseEntity.ok(reviews);
     }
+
+    @GetMapping("/reviews/product/{productId}")
+    @SecurityRequirement(name = "BearerAuth")
+    @Operation(summary = "제품 리뷰 조회", description = "특정 제품의 리뷰를 조회합니다.")
+    public ResponseEntity<List<ReviewResponseDto>> getReviewsByProductId(@PathVariable Long productId) {
+        List<ReviewResponseDto> reviews = reviewService.getReviewsByProductId(productId);
+        return ResponseEntity.ok(reviews);
+    }
 }

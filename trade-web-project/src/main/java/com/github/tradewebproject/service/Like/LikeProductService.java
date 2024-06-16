@@ -75,6 +75,40 @@ public class LikeProductService {
         return responseDto;
     }
 
+    public LikePageDto getLikesByProductId(Long productId, int page, int size, String sort) {
+        Sort sortBy = Sort.by("price");
+        if (sort.equals("asc")) {
+            sortBy = Sort.by(Sort.Direction.ASC, "price");
+        } else if ("desc".equalsIgnoreCase(sort)) {
+            sortBy = Sort.by(Sort.Direction.DESC, "price");
+        }
+
+        Pageable pageable = PageRequest.of(page - 1, size, sortBy);
+        Page<Like> likePage = likeRepository.findByProductProductId(productId, pageable);
+
+        List<LikeProductDto> likeProductDtoList = likePage.stream().map(like -> {
+            LikeProductDto dto = new LikeProductDto();
+            dto.setLikeProductId(like.getLikeProductId());
+            dto.setUserId(like.getUser().getUserId());
+            dto.setProductId(like.getProduct().getProductId());
+            dto.setProductName(like.getProduct().getProductName());
+            dto.setPrice(like.getPrice());
+            dto.setSellerNickname(like.getProduct().getUser().getUserNickname());
+            dto.setProductStatus(like.getProductStatus());
+            // 이미지 파일 경로 설정
+            String imageUrl = like.getImageUrl();
+            dto.setImageUrl(imageUrl);
+
+            return dto;
+        }).collect(Collectors.toList());
+
+        LikePageDto responseDto = new LikePageDto();
+        responseDto.setProducts(likeProductDtoList);
+        responseDto.setTotalPages(likePage.getTotalPages());
+
+        return responseDto;
+    }
+
     @Transactional
     public Long toggleLikeProduct(String email, Long productId) {
         User user = userRepository.findByEmail2(email)

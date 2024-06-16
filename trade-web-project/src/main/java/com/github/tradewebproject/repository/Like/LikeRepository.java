@@ -18,6 +18,6 @@ public interface LikeRepository extends JpaRepository<Like, Long> {
 
     boolean existsByUserAndProduct_ProductId(User user, Long productId);
 
-
+    Page<Like> findByProductProductId(Long productId, Pageable pageable);
     Optional<Like> findByUserAndProduct_ProductId(User user, Long productId);
 }

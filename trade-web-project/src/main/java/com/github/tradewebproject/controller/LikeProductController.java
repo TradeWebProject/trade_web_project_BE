@@ -54,4 +54,15 @@ public class LikeProductController {
             @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순)") @RequestParam(defaultValue = "asc") String sort) {
         return likeProductService.getLikeByUserId(userId, page, size, sort);
     }
+
+    @GetMapping("/likes/product/{productId}")
+    @SecurityRequirement(name = "BearerAuth")
+    @Operation(summary = "상품의 찜 목록 조회", description = "특정 상품을 찜한 사용자 목록을 조회합니다.")
+    public LikePageDto getLikesByProductId(
+            @Parameter(description = "상품 ID") @PathVariable Long productId,
+            @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
+            @Parameter(description = "페이지 당 사용자 수(디폴트값 10명)") @RequestParam(defaultValue = "10") int size,
+            @Parameter(description = "정렬 방식 (asc: 오름차순, desc: 내림차순)") @RequestParam(defaultValue = "asc") String sort) {
+        return likeProductService.getLikesByProductId(productId, page, size, sort);
+    }
 }
