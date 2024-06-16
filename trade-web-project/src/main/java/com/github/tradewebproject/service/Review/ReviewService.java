@@ -81,5 +81,23 @@ public class ReviewService {
                 .collect(Collectors.toList());
     }
 
+    @Transactional
+    public List<ReviewResponseDto> getReviewsByProductId(Long productId) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        List<Review> reviews = reviewRepository.findByProduct(product);
+        return reviews.stream()
+                .map(review -> new ReviewResponseDto(
+                        review.getReviewTitle(),
+                        review.getReviewContent(),
+                        review.getProduct().getProductId(),
+                        review.getUser().getUserId(),
+                        review.getRating(),
+                        review.getReviewId()
+                ))
+                .collect(Collectors.toList());
+    }
+
 
 }
