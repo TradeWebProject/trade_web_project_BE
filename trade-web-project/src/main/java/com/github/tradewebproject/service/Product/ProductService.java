@@ -374,7 +374,7 @@ public class ProductService {
     }
 
     // 상품 검색
-    public ProductPageResponseDto searchProducts(String keyword, int page, int size, String sort, Integer minPrice, Integer maxPrice, String category, String status) {
+    public ProductPageResponseDto searchProducts(String keyword, int page, int size, String sort, Integer minPrice, Integer maxPrice, String category, String quality) {
         Sort sortBy = Sort.by("price");
         if ("asc".equalsIgnoreCase(sort)) {
             sortBy = Sort.by(Sort.Direction.ASC, "price");
@@ -385,7 +385,9 @@ public class ProductService {
         }
 
         Pageable pageable = PageRequest.of(page - 1, size, sortBy);
-        Specification<Product> spec = ProductSpecification.filterProducts(keyword, minPrice, maxPrice, category, status);
+
+        Specification<Product> spec = ProductSpecification.filterProducts(keyword, minPrice, maxPrice, category, quality);
+
         Page<Product> productsPage = productRepository.findAll(spec, pageable);
 
         List<ProductResponseDto> productDtos = productsPage.stream().map(product -> {
