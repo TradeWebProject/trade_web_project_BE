@@ -16,7 +16,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
@@ -168,8 +167,8 @@ public class ProductController {
             @Parameter(description = "최소 가격") @RequestParam(required = false) Integer minPrice,
             @Parameter(description = "최대 가격") @RequestParam(required = false) Integer maxPrice,
             @Parameter(description = "카테고리") @RequestParam(required = false) String category,
-            @Parameter(description = "상품 상태(새상품, 중고상품)") @RequestParam(required = false) String status) {
-        ProductPageResponseDto responseDto = productService.searchProducts(keyword, page, size, sort, minPrice, maxPrice, category, status);
+            @Parameter(description = "상품 상태(새상품, 중고상품)") @RequestParam(required = false) String quality) {
+        ProductPageResponseDto responseDto = productService.searchProducts(keyword, page, size, sort, minPrice, maxPrice, category, quality);
         return ResponseEntity.ok(responseDto);
     }
 
