@@ -33,6 +33,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -118,6 +119,15 @@ public class ProductService {
         User user = userRepository.findByEmail2(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
+        List<String> validCategories = Arrays.asList("전자기기", "의류", "가전", "문구", "도서", "신발", "여행용품", "스포츠");
+        if (!validCategories.contains(productDTO.getCategory())) {
+            throw new RuntimeException("카테고리명을 적절하게 입력해주세요 (전자기기 , 의류, 가전 , 문구 , 도서 ,신발 ,여행용품 , 스포츠 중 하나) 현재 입력한 카테고리 명 : " + productDTO.getCategory());
+        }
+        List<String> validQualities = Arrays.asList("새상품", "중고상품");
+        if (!validQualities.contains(productDTO.getProductQuality())) {
+            throw new RuntimeException("상품 상태를 적절하게 입력해주세요 (새상품 , 중고상품 중 하나) 현재 입력한 상품 상태 명 : " + productDTO.getProductQuality());
+        }
+
         List<MultipartFile> files = productDTO.getFiles() != null ? productDTO.getFiles() : new ArrayList<>();
 
         List<String> imagePaths = files.stream()
@@ -196,6 +206,16 @@ public class ProductService {
         // 상품 소유자 확인
         if (!product.getUser().getUserId().equals(user.getUserId())) {
             throw new RuntimeException("You do not have permission to update this product.");
+        }
+
+        List<String> validCategories = Arrays.asList("전자기기", "의류", "가전", "문구", "도서", "신발", "여행용품", "스포츠");
+        if (!validCategories.contains(productDTO.getCategory())) {
+            throw new RuntimeException("카테고리명을 적절하게 입력해주세요 (전자기기 , 의류, 가전 , 문구 , 도서 ,신발 ,여행용품 , 스포츠 중 하나) 현재 입력한 카테고리 명 : " + productDTO.getCategory());
+        }
+
+        List<String> validQualities = Arrays.asList("새상품", "중고상품");
+        if (!validQualities.contains(productDTO.getProductQuality())) {
+            throw new RuntimeException("상품 상태를 적절하게 입력해주세요 (새상품 , 중고상품 중 하나) 현재 입력한 상품 상태 명 : " + productDTO.getProductQuality());
         }
 
         // 상품 정보 업데이트
@@ -285,7 +305,7 @@ public class ProductService {
                 .map(product -> {
                     List<String> imagePathUrl = new ArrayList<>();
                     for (String imagePath : product.getImagePaths()) {
-                        String imageUrl = "/images/" + imagePath; // 수정: imagePath를 사용하여 이미지 URL 생성
+                        String imageUrl = "/images/" + imagePath;
                         imagePathUrl.add(imageUrl);
                     }
 
@@ -294,13 +314,13 @@ public class ProductService {
                     // 리뷰 리스트 생성
                     List<SellerReviewResponseDto> reviews = new ArrayList<>();
                     String baseImageUrl = "/images/";
-                    List<Review> productReviews = reviewRepository.findByProduct(product); // 수정: products 리스트 대신 product 객체 사용
+                    List<Review> productReviews = reviewRepository.findByProduct(product);
                     for (Review review : productReviews) {
                         reviews.add(new SellerReviewResponseDto(
                                 product.getProductName(),
                                 review.getReviewDate(),
                                 review.getUser().getUserNickname(),
-                                baseImageUrl + review.getUser().getUserImg(), // 이미지 경로에 base URL 추가
+                                baseImageUrl + review.getUser().getUserImg(),
                                 review.getRating(),
                                 review.getReviewContent(),
                                 review.getReviewTitle()
@@ -332,6 +352,7 @@ public class ProductService {
                             product.getPrice(),
                             product.getCategory(),
                             product.getUser().getUserNickname(),
+                            product.getUser().getUserId(),
                             product.getProductStatus(),
                             product.getProductQuality(),
                             product.getStartDate(),
@@ -364,7 +385,9 @@ public class ProductService {
         }
 
         Pageable pageable = PageRequest.of(page - 1, size, sortBy);
+
         Specification<Product> spec = ProductSpecification.filterProducts(keyword, minPrice, maxPrice, category, quality);
+
         Page<Product> productsPage = productRepository.findAll(spec, pageable);
 
         List<ProductResponseDto> productDtos = productsPage.stream().map(product -> {

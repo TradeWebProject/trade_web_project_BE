@@ -1,5 +1,6 @@
 package com.github.tradewebproject.service.User;
 
+import com.github.tradewebproject.Dto.User.EditUserDto;
 import com.github.tradewebproject.Dto.User.NewUserDto;
 import com.github.tradewebproject.Dto.User.UserDto;
 import com.github.tradewebproject.Dto.User.getUserDto;
@@ -23,7 +24,7 @@ public interface  UserService {
     public String logout(HttpServletRequest request, String email);
 
     UserResponse getByEmail(String email);
-    //    getUserDto getUserById(Long id);
+    UserDto editUser(Long userId, EditUserDto editUserDto) throws IOException;
     ResponseEntity<?> getUserById(Long userId);
 
 

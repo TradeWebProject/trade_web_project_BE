@@ -1,12 +1,9 @@
 package com.github.tradewebproject.service.User;
 
-import com.github.tradewebproject.Dto.User.getUserDto;
+import com.github.tradewebproject.Dto.User.*;
 import com.github.tradewebproject.controller.UserResponse;
 import com.github.tradewebproject.Dto.Jwt.JwtProvider;
 import com.github.tradewebproject.Dto.Jwt.Token;
-import com.github.tradewebproject.Dto.User.NewUserDto;
-import com.github.tradewebproject.Dto.User.Role;
-import com.github.tradewebproject.Dto.User.UserDto;
 
 import com.github.tradewebproject.domain.User;
 import com.github.tradewebproject.repository.Jwt.TokenJpaRepository;
@@ -51,6 +48,10 @@ public class UserServiceImpl implements UserService {
 
     @Value("${UPLOAD_DIR}")
     private String uploadDir;
+
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private FileStorageUtil fileStorageUtil;
@@ -183,75 +184,56 @@ public class UserServiceImpl implements UserService {
         return authorities;
     }
 
+    @Override
+    @Transactional
+    public UserDto editUser(Long userId, EditUserDto editUserDto) throws IOException {
+        // 사용자 찾기 (이메일 통해 조회)
+        User user = userRepository.findByEmail2(editUserDto.getEmail())
+                .orElseThrow(() -> new RuntimeException("User not found"));
 
+        // 비밀번호 확인
+        if (!passwordEncoder.matches(editUserDto.getPassword(), user.getUserPassword())) {
+            throw new RuntimeException("Incorrect password.");
+        }
 
-//    @Override base64 인코딩한거
-//    public getUserDto getUserById(Long userId) {
-//        User userEntity = userJpaRepository.findByUserId(userId);
-//        if (userEntity == null) {
-//            return null;
-//        }
-//
-//        String base64Image = ""; // base64 이미지를 저장할 변수 초기화
-//        try {
-//            Path filePath = Paths.get(uploadDir).resolve(userEntity.getUserImg()).normalize(); // 이미지 파일 경로
-//            byte[] imageBytes = Files.readAllBytes(filePath); // 이미지 파일 읽기
-//            base64Image = Base64.getEncoder().encodeToString(imageBytes); // base64로 인코딩
-//        } catch (IOException e) {
-//            e.printStackTrace(); // 예외 처리
-//            // 로그 남기기나 적절한 예외 처리 로직 추가
-//        }
-//
-//        return getUserDto.builder()
-//                .email(userEntity.getEmail())
-//                .user_nickname(userEntity.getUserNickname())
-//                .user_phone(userEntity.getUserPhone())
-//                .userInterests(userEntity.getUserInterests())
-//                .user_img(base64Image) // base64 인코딩된 이미지 설정
-//
-//                .build();
-//    }
+        // 사용자 정보 수정
+        if (editUserDto.getNickname() != null) {
+            user.setUserNickname(editUserDto.getNickname());
+        }
 
-    //    @Override // 이미지 자체담은 코드
-//    public ResponseEntity<?> getUserById(Long userId) {
-//        User userEntity = userJpaRepository.findByUserId(userId);
-//        if (userEntity == null) {
-//            return ResponseEntity.notFound().build();
-//        }
-//
-//        // getUserDto 생성
-//        getUserDto getuserDto = getUserDto.builder()
-//                .email(userEntity.getEmail())
-//                .user_nickname(userEntity.getUserNickname())
-//                .user_phone(userEntity.getUserPhone())
-//                .userInterests(userEntity.getUserInterests())
-//                .build();
-//
-//        // 이미지 파일 읽기
-//        try {
-//            Path filePath = Paths.get(uploadDir).resolve(userEntity.getUserImg()).normalize();
-//            byte[] imageBytes = Files.readAllBytes(filePath);
-//
-//            // 멀티파트 응답 생성
-//            MultipartFileResource multipartFileResource = new MultipartFileResource(imageBytes, userEntity.getUserImg());
-//
-//            // 멀티파트 응답을 위한 HttpHeaders 설정
-//            HttpHeaders headers = new HttpHeaders();
-//            headers.setContentType(MediaType.APPLICATION_JSON);
-//            headers.setContentDispositionFormData("attachment", userEntity.getUserImg());
-//            headers.setContentLength(imageBytes.length);
-//
-//            // 멀티파트 응답 생성
-//            MultiValueMap<String, Object> multipartResponse = new LinkedMultiValueMap<>();
-//            multipartResponse.add("user", getuserDto);
-//            multipartResponse.add("file", new HttpEntity<>(multipartFileResource, headers));
-//
-//            return ResponseEntity.ok(multipartResponse);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-//        }
-//    }
+        if (editUserDto.getPhone() != null) {
+            user.setUserPhone(editUserDto.getPhone());
+        }
+
+        if (editUserDto.getInterests() != null) {
+            List<String> allowedInterests = Arrays.asList("전자기기", "의류", "가전", "문구", "도서", "신발", "여행용품", "스포츠");
+            for (String interest : editUserDto.getInterests()) {
+                if (!allowedInterests.contains(interest)) {
+                    throw new RuntimeException("관심사는 전자기기, 의류, 가전, 문구, 도서, 신발, 여행용품, 스포츠 중에서 선택해주세요.");
+                }
+            }
+            user.setUserInterests(new ArrayList<>(editUserDto.getInterests()));
+        }
+
+        if (editUserDto.getUserImg() != null && !editUserDto.getUserImg().isEmpty()) {
+            String imagePath = fileStorageUtil.storeFile(editUserDto.getUserImg());
+            user.setUserImg(imagePath);
+        }
+
+        // 저장 후 UserDto로 변환
+        User savedUser = userJpaRepository.save(user);
+
+        return UserDto.builder()
+                .userId(savedUser.getUserId())
+                .email(savedUser.getEmail())
+                .userPassword(savedUser.getUserPassword()) // 비밀번호 포함
+                .userNickname(savedUser.getUserNickname())
+                .userPhone(savedUser.getUserPhone())
+                .userInterests(savedUser.getUserInterests())
+                .userImg(savedUser.getUserImg())
+                .build();
+    }
+
     @Override
     public ResponseEntity<?> getUserById(Long userId) {
         User userEntity = userJpaRepository.findByUserId(userId);

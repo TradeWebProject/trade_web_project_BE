@@ -13,6 +13,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -43,7 +44,8 @@ public class User implements Serializable {
     @ElementCollection
     @CollectionTable(name = "user_interests", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "user_interests", columnDefinition = "TEXT")
-    private List<String> userInterests;
+    private List<String> userInterests = new ArrayList<>();
+
 
     @Column(name = "user_img", length = 255)
     private String userImg;
@@ -78,4 +80,6 @@ public class User implements Serializable {
                 .userId(this.userId)
                 .build();
     }
+
+
 }
