@@ -1,6 +1,7 @@
 package com.github.tradewebproject.controller;
 
 import com.github.tradewebproject.Dto.Jwt.ResponseToken;
+import com.github.tradewebproject.Dto.User.EditUserDto;
 import com.github.tradewebproject.Dto.User.NewUserDto;
 import com.github.tradewebproject.Dto.User.UserDto;
 import com.github.tradewebproject.Dto.Jwt.Token;
@@ -39,10 +40,17 @@ public class UserController {
             @RequestParam("interests") String userInterests,
             @RequestParam("userImg") MultipartFile userImg) {
 
+        List<String> allowedInterests = Arrays.asList("전자기기", "의류", "가전", "문구", "도서", "신발", "여행용품", "스포츠");
+
         try {
             List<String> interestsList = Arrays.asList(userInterests.split(","));
             if (interestsList.size() > 3) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("관심사는 최대 3개까지 입력할 수 있습니다.");
+            }
+            for (String interest : interestsList) {
+                if (!allowedInterests.contains(interest)) {
+                    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("관심사는 전자기기, 의류, 가전, 문구, 도서, 신발, 여행용품, 스포츠 중에서 선택해주세요.");
+                }
             }
 
             NewUserDto newUserDto = NewUserDto.builder()
@@ -104,15 +112,50 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("회원 탈퇴 되었습니다.");
     }
 
-//    @GetMapping("/users/{userId}")
-//    @SecurityRequirement(name = "BearerAuth")
-//    public ResponseEntity<getUserDto> getUserById(@PathVariable Long userId) {
-//        getUserDto getuserDto = userService.getUserById(userId);
-//        if (getuserDto == null) {
-//            return ResponseEntity.notFound().build();
-//        }
-//        return ResponseEntity.ok(getuserDto);
-//    }
+    @PutMapping("/users/edit/{userId}")
+    @Operation(summary = "회원 정보 수정", description = "이메일, 비밀번호를 입력받고, 닉네임, 전화번호, 관심사, 프로필 사진을 수정합니다.")
+    @SecurityRequirement(name = "BearerAuth")
+    public ResponseEntity<?> editUser(
+            @PathVariable("userId") Long userId,
+            @RequestParam("email") String email,
+            @RequestParam("password") String password,
+            @RequestParam(value = "nickname", required = false) String nickname,
+            @RequestParam(value = "phone", required = false) String phone,
+            @RequestParam(value = "interests", required = false) String interests,
+            @RequestParam(value = "userImg", required = false) MultipartFile userImg) {
+
+        List<String> allowedInterests = Arrays.asList("전자기기", "의류", "가전", "문구", "도서", "신발", "여행용품", "스포츠");
+
+        try {
+            List<String> interestsList = interests != null ? Arrays.asList(interests.split(",")) : null;
+            if (interestsList != null && interestsList.size() > 3) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("관심사는 최대 3개까지 입력할 수 있습니다.");
+            }
+            if (interestsList != null) {
+                for (String interest : interestsList) {
+                    if (!allowedInterests.contains(interest)) {
+                        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("관심사는 전자기기, 의류, 가전, 문구, 도서, 신발, 여행용품, 스포츠 중에서 선택해주세요.");
+                    }
+                }
+            }
+
+            EditUserDto editUserDto = EditUserDto.builder()
+                    .email(email)
+                    .password(password)
+                    .nickname(nickname)
+                    .phone(phone)
+                    .interests(interestsList)
+                    .userImg(userImg)
+                    .build();
+
+            UserDto updatedUser = userService.editUser(userId, editUserDto);
+            return ResponseEntity.ok(UserResponse.of(updatedUser));
+        } catch (Exception e) {
+            e.printStackTrace(); // 예외 스택 트레이스 출력
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
 
     @GetMapping("/users/{userId}")
     @Operation(summary = "유저 아이디로 유저조회", description = "유저 ID에 해당하는 유저의 정보를 조회합니다.")

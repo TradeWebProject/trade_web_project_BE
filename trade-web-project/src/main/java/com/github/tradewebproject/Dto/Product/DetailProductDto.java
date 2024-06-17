@@ -38,14 +38,16 @@ public class DetailProductDto {
     private int totalRatings;
     private int totalSales;
     private double averageRating;
+    private Long sellerId;
 
-    public DetailProductDto(Long productId, String productName, String description, Integer price, String category, String userNickName, Integer productStatus,String productQuality, Date startDate, Date endDate ,String thumbNail, List<String> imagePaths) {
+    public DetailProductDto(Long productId, String productName, String description, Integer price, String category, String userNickName,Long sellerId, Integer productStatus,String productQuality, Date startDate, Date endDate ,String thumbNail, List<String> imagePaths) {
         this.productId = productId;
         this.productName = productName;
         this.description = description;
         this.price = price;
         this.category = category;
         this.userNickName = userNickName;
+        this.sellerId = sellerId;
         this.productStatus = productStatus;
         this.productQuality = productQuality;
         this.thumbnailUrl = thumbNail;
