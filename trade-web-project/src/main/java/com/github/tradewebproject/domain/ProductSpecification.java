@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProductSpecification {
 
-    public static Specification<Product> filterProducts(String keyword, Integer minPrice, Integer maxPrice, String category, String status) {
+    public static Specification<Product> filterProducts(String keyword, Integer minPrice, Integer maxPrice, String category, String quality) {
         return (root, query, criteriaBuilder) -> {
             Predicate predicate = criteriaBuilder.conjunction();
 
@@ -28,8 +28,8 @@ public class ProductSpecification {
                 predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("category"), category));
             }
 
-            if (status != null && !status.isEmpty()) {
-                predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("productQuality"), status));
+            if (quality != null && !quality.isEmpty()) {
+                predicate = criteriaBuilder.and(predicate, criteriaBuilder.equal(root.get("productQuality"), quality));
             }
 
             // productStatus가 1인 조건 추가
