@@ -1,7 +1,7 @@
 package com.github.tradewebproject.service.User;
 
 import com.github.tradewebproject.Dto.User.*;
-import com.github.tradewebproject.controller.UserResponse;
+import com.github.tradewebproject.controller.User.UserResponse;
 import com.github.tradewebproject.Dto.Jwt.JwtProvider;
 import com.github.tradewebproject.Dto.Jwt.Token;
 
@@ -11,7 +11,6 @@ import com.github.tradewebproject.repository.Jwt.TokenRepository;
 import com.github.tradewebproject.repository.User.UserJpaRepository;
 import com.github.tradewebproject.repository.User.UserRepository;
 import com.github.tradewebproject.util.FileStorageUtil;
-import com.github.tradewebproject.util.MultipartFileResource;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,13 +24,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 
 @RequiredArgsConstructor
