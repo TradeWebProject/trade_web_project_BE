@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class ChatRoomResponse {
-    private Long id;
+    private Long ChatRoomid;
     private Long sellerId;
     private Long buyerId;
     private String sellerNickname;
@@ -17,7 +17,7 @@ public class ChatRoomResponse {
 
     // 생성자
     public ChatRoomResponse(ChatRoom chatRoom) {
-        this.id = chatRoom.getChatRoomId();
+        this.ChatRoomid = chatRoom.getChatRoomId();
         this.sellerId = chatRoom.getSeller().getUserId();
         this.buyerId = chatRoom.getBuyer().getUserId();
         this.sellerNickname = chatRoom.getSeller().getUserNickname();

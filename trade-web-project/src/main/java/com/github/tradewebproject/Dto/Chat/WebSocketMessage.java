@@ -11,10 +11,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class WebSocketMessage {
-
     private Long chatRoomId;
     private Long senderId;
     private String messageContent;
-
-
+    private String messageType;
+    private String imageUrl;
+    private String emojiCode;
 }
