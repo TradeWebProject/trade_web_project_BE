@@ -3,21 +3,44 @@ package com.github.tradewebproject.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
+
+@Data
 @NoArgsConstructor
-@Entity
 @AllArgsConstructor
-@Table(name = "chat_message")
+@Builder
+@Entity
+@Table(name = "chat_messages")
 public class ChatMessage {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String sender; //전송자
-    private String recipient; //수신자
-    private String content;
-    private LocalDateTime timestamp;
-}
+    @Column(name = "chat_message_id")
+    private Long chatMessageId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "chat_room_id", nullable = false)
+    private ChatRoom chatRoom;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sender_id", nullable = false)
+    private User sender;
+
+    @Column(name = "message", nullable = false, columnDefinition = "TEXT")
+    private String message;
+
+    @Column(name = "sent_time", nullable = false)
+    private LocalDateTime sentTime;
+
+    @Builder
+    public ChatMessage(ChatRoom chatRoom, User sender, String message, LocalDateTime sentTime) {
+        this.chatRoom = chatRoom;
+        this.sender = sender;
+        this.message = message;
+        this.sentTime = sentTime;
+    }
+
+
+}
