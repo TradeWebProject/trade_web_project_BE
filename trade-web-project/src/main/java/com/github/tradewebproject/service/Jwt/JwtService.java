@@ -7,5 +7,4 @@ public interface JwtService {
 
     void createAccessTokenHeader(HttpServletResponse response, String refreshToken);
     UserDto checkAccessTokenValid(String accessToken);
-
 }

@@ -1,5 +1,6 @@
 package com.github.tradewebproject.Dto.Chat;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,9 +13,13 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class ChatMessageDto {
-    private String sender;
-    private String recipient;
+    private Long chatRoomId;
+    private Long senderId;
+    private String senderNickName;
+    private String senderImgUrl;
     private String content;
-    private LocalDateTime timestamp;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime sendTime;
+    private MessageType messageType;
 }

@@ -1,5 +1,6 @@
 package com.github.tradewebproject.domain;
 
+import com.github.tradewebproject.Dto.Chat.MessageType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -34,13 +35,16 @@ public class ChatMessage {
     @Column(name = "sent_time", nullable = false)
     private LocalDateTime sentTime;
 
-    @Builder
-    public ChatMessage(ChatRoom chatRoom, User sender, String message, LocalDateTime sentTime) {
-        this.chatRoom = chatRoom;
-        this.sender = sender;
-        this.message = message;
-        this.sentTime = sentTime;
-    }
+    @Enumerated(EnumType.STRING)
+    private MessageType messageType;
+
+//    @Builder
+//    public ChatMessage(ChatRoom chatRoom, User sender, String message, LocalDateTime sentTime) {
+//        this.chatRoom = chatRoom;
+//        this.sender = sender;
+//        this.message = message;
+//        this.sentTime = sentTime;
+//    }
 
 
 }
