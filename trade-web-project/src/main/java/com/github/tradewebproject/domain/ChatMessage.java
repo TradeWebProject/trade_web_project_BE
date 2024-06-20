@@ -38,13 +38,6 @@ public class ChatMessage {
     @Enumerated(EnumType.STRING)
     private MessageType messageType;
 
-//    @Builder
-//    public ChatMessage(ChatRoom chatRoom, User sender, String message, LocalDateTime sentTime) {
-//        this.chatRoom = chatRoom;
-//        this.sender = sender;
-//        this.message = message;
-//        this.sentTime = sentTime;
-//    }
 
 
 }

@@ -1,5 +1,6 @@
 package com.github.tradewebproject.Dto.Jwt;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,9 @@ public class ResponseToken {
     private String userEmail;
 
     private String accessToken;
-//    private String refreshToken;
+
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime accessTokenTime;
     private Long userId;
 

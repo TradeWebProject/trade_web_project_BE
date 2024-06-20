@@ -1,11 +1,14 @@
 package com.github.tradewebproject.Dto.Product;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.tradewebproject.Dto.Review.ReviewResponseDto;
 import com.github.tradewebproject.Dto.Review.SellerReviewResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,7 +30,12 @@ public class DetailProductDto {
     private String category;
     private String productQuality;
     private String userNickName;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date startDate;
+
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date endDate;
     private Integer productStatus;
     private String thumbnailUrl;

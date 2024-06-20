@@ -20,6 +20,7 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -77,13 +78,16 @@ public class WebSocketHandler extends TextWebSocketHandler {
             Long chatRoomId = (Long) session.getAttributes().get("chatRoomId");
             if (chatRoomId != null && isUserAuthorizedForChatRoom(user, chatRoomId)) {
                 Long senderId = user.getUserId();
+                LocalDateTime sentTime = LocalDateTime.now(); // 현재 시간을 sentTime으로 설정
+
                 ChatMessageDto chatMessageDto = null;
                 switch (webSocketMessageDto.getMessageType()) {
                     case "TEXT":
                         chatMessageDto = chatMessageService.sendTextMessage(
                                 chatRoomId,
                                 senderId,
-                                webSocketMessageDto.getMessageContent()
+                                webSocketMessageDto.getMessageContent(),
+                                sentTime
                         );
                         break;
                     case "IMAGE":
@@ -91,14 +95,16 @@ public class WebSocketHandler extends TextWebSocketHandler {
                         chatMessageDto = chatMessageService.sendImageMessage(
                                 chatRoomId,
                                 senderId,
-                                imageUrl
+                                imageUrl,
+                                sentTime
                         );
                         break;
                     case "EMOJI":
                         chatMessageDto = chatMessageService.sendEmojiMessage(
                                 chatRoomId,
                                 senderId,
-                                webSocketMessageDto.getEmojiCode()
+                                webSocketMessageDto.getEmojiCode(),
+                                sentTime
                         );
                         break;
                     default:
@@ -121,35 +127,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
             session.close(CloseStatus.NOT_ACCEPTABLE);
         }
     }
-//    @Override
-//    public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-//        WebSocketMessage webSocketMessageDto = objectMapper.readValue(message.getPayload(), WebSocketMessage.class);
-//
-//        String token = getTokenFromSession(session);
-//        User user = getUserFromToken(token);
-//        if (user != null) {
-//            Long chatRoomId = (Long) session.getAttributes().get("chatRoomId"); // 세션 속성에서 chatRoomId 가져오기
-//            if (chatRoomId != null && isUserAuthorizedForChatRoom(user, chatRoomId)) {
-//                Long senderId = user.getUserId();
-//                ChatMessageDto chatMessageDto = chatMessageService.sendMessage(
-//                        chatRoomId,
-//                        senderId,
-//                        webSocketMessageDto.getMessageContent()
-//                );
-//
-//                TextMessage responseMessage = new TextMessage(objectMapper.writeValueAsString(chatMessageDto));
-//                for (WebSocketSession webSocketSession : sessions.values()) {
-//                    if (webSocketSession.isOpen()) {
-//                        webSocketSession.sendMessage(responseMessage);
-//                    }
-//                }
-//            } else {
-//                session.close(CloseStatus.NOT_ACCEPTABLE);
-//            }
-//        } else {
-//            session.close(CloseStatus.NOT_ACCEPTABLE);
-//        }
-//    }
+
 
     private Long getChatRoomIdFromSession(WebSocketSession session) {
         // WebSocketSession의 URL에서 채팅방 ID를 추출하는 방법

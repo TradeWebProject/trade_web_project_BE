@@ -27,13 +27,6 @@ public class ChatMessageResponse {
 
     private MessageType messageType;
 
-//    public ChatMessageResponse(ChatMessage chatMessage) {
-//        this.chatMessageId = chatMessage.getChatMessageId(); // ChatMessage의 ID 필드가 있다고 가정
-//        this.chatRoomId = chatMessage.getChatRoom().getChatRoomId();
-//        this.senderId = chatMessage.getSender().getUserId();
-//        this.message = chatMessage.getMessage();
-//        this.sentTime = chatMessage.getSentTime();
-//    }
 
     public static List<ChatMessageResponse> fromChatMessages(List<ChatMessage> chatMessages) {
         return chatMessages.stream()
