@@ -12,12 +12,14 @@ import com.github.tradewebproject.repository.User.UserRepository;
 import com.github.tradewebproject.service.Chat.ChatMessageService;
 import com.github.tradewebproject.service.Chat.ChatRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.security.Principal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -81,7 +83,8 @@ public class ChatController {
     public ResponseEntity<ChatMessageDto> sendMessage(Principal principal,
                                                       @RequestParam Long chatRoomId,
                                                       @RequestParam String messageContent,
-                                                      @RequestParam String messageTypeStr) {
+                                                      @RequestParam String messageTypeStr,
+                                                      @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime sentTime) {
         String email = principal.getName();
         User sender = userRepository.findByEmail2(email)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
@@ -97,13 +100,13 @@ public class ChatController {
         ChatMessageDto chatMessageDto;
         switch (messageType) {
             case TEXT:
-                chatMessageDto = chatMessageService.sendTextMessage(chatRoomId, senderId, messageContent);
+                chatMessageDto = chatMessageService.sendTextMessage(chatRoomId, senderId, messageContent, sentTime);
                 break;
             case IMAGE:
-                chatMessageDto = chatMessageService.sendImageMessage(chatRoomId, senderId, messageContent);
+                chatMessageDto = chatMessageService.sendImageMessage(chatRoomId, senderId, messageContent, sentTime);
                 break;
             case EMOJI:
-                chatMessageDto = chatMessageService.sendEmojiMessage(chatRoomId, senderId, messageContent);
+                chatMessageDto = chatMessageService.sendEmojiMessage(chatRoomId, senderId, messageContent, sentTime);
                 break;
             default:
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unsupported message type");
@@ -111,6 +114,7 @@ public class ChatController {
 
         return ResponseEntity.ok(chatMessageDto);
     }
+
 
     private User getUserByEmail(String email) {
         return userRepository.findByEmail2(email)

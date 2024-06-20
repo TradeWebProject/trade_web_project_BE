@@ -32,6 +32,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -341,6 +342,9 @@ public class ProductService {
                             .mapToDouble(Review::getRating)
                             .average()
                             .orElse(0);
+
+                    DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                    averageRating = Double.parseDouble(decimalFormat.format(averageRating));
 
                     // 해당 물건을 등록한 유저의 총 판매 수 계산
                     int totalSales = purchaseRepository.countBySellerId(userId);
