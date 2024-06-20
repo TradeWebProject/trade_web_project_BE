@@ -1,6 +1,8 @@
 package com.github.tradewebproject.Dto.Purchase;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -19,6 +21,8 @@ import java.util.Date;
 public class PurchaseDto {
     private Long purchaseId;
     private Long productId;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date purchaseDate;
     private String productName;
     private String imageUrl;

@@ -20,6 +20,8 @@ import java.util.List;
 @Service
 public class ChatMessageService {
 
+
+
     @Autowired
     private ChatMessageRepository chatMessageRepository;
 
@@ -29,19 +31,19 @@ public class ChatMessageService {
     @Autowired
     private UserJpaRepository userRepository;
 
-    public ChatMessageDto sendTextMessage(Long chatRoomId, Long senderId, String messageContent) {
-        return sendMessage(chatRoomId, senderId, messageContent, MessageType.TEXT);
+    public ChatMessageDto sendTextMessage(Long chatRoomId, Long senderId, String messageContent, LocalDateTime sentTime) {
+        return sendMessage(chatRoomId, senderId, messageContent, MessageType.TEXT, sentTime);
     }
 
-    public ChatMessageDto sendImageMessage(Long chatRoomId, Long senderId, String imageUrl) {
-        return sendMessage(chatRoomId, senderId, imageUrl, MessageType.IMAGE);
+    public ChatMessageDto sendImageMessage(Long chatRoomId, Long senderId, String imageUrl, LocalDateTime sentTime) {
+        return sendMessage(chatRoomId, senderId, imageUrl, MessageType.IMAGE, sentTime);
     }
 
-    public ChatMessageDto sendEmojiMessage(Long chatRoomId, Long senderId, String emojiCode) {
-        return sendMessage(chatRoomId, senderId, emojiCode, MessageType.EMOJI);
+    public ChatMessageDto sendEmojiMessage(Long chatRoomId, Long senderId, String emojiCode, LocalDateTime sentTime) {
+        return sendMessage(chatRoomId, senderId, emojiCode, MessageType.EMOJI, sentTime);
     }
 
-    private ChatMessageDto sendMessage(Long chatRoomId, Long senderId, String content, MessageType messageType) {
+    private ChatMessageDto sendMessage(Long chatRoomId, Long senderId, String content, MessageType messageType, LocalDateTime sentTime) {
         ChatRoom chatRoom = chatRoomRepository.findById(chatRoomId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Chat room not found"));
         User sender = userRepository.findById(senderId)
@@ -52,7 +54,7 @@ public class ChatMessageService {
                 .sender(sender)
                 .message(content)
                 .messageType(messageType)
-                .sentTime(LocalDateTime.now())
+                .sentTime(sentTime)
                 .build();
 
         ChatMessage savedMessage = chatMessageRepository.save(message);
@@ -69,6 +71,7 @@ public class ChatMessageService {
 
         return chatMessageDto;
     }
+
 
     public List<ChatMessage> findAllMessagesByChatRoomId(Long chatRoomId) {
         return chatMessageRepository.findAllByChatRoom_ChatRoomId(chatRoomId);
