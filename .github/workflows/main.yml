@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  S3_BUCKET_NAME: trade_web
+  S3_BUCKET_NAME: trade-web
 
 jobs:
   build:
