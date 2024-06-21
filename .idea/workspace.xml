@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3132b378-3154-43a0-938f-ca525d64c8ee" name="변경" comment="" />
+    <list default="true" id="3132b378-3154-43a0-938f-ca525d64c8ee" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/appspec.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appespec.yml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +111,14 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TradeWebProjectApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="trade-web-project.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.trade_web_project_BE.TradeWebProjectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TradeWebProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="prod" />
       <envs>
@@ -130,6 +142,7 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.trade-web-project [bootJar]" />
+      <item itemvalue="Spring Boot.TradeWebProjectApplication (1)" />
       <item itemvalue="Spring Boot.TradeWebProjectApplication" />
     </list>
     <recent_temporary>
@@ -155,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718978977622</updated>
-      <workItem from="1718978980362" duration="5705000" />
+      <workItem from="1718978980362" duration="6145000" />
     </task>
     <servers />
   </component>
