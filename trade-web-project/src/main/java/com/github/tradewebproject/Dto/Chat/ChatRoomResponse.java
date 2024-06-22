@@ -15,6 +15,7 @@ public class ChatRoomResponse {
     private String sellerNickname;
     private String buyerNickname;
 
+
     // 생성자
     public ChatRoomResponse(ChatRoom chatRoom) {
         this.ChatRoomid = chatRoom.getChatRoomId();

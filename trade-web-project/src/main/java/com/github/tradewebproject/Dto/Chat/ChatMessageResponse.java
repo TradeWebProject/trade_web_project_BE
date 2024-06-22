@@ -28,6 +28,7 @@ public class ChatMessageResponse {
     private MessageType messageType;
 
 
+
     public static List<ChatMessageResponse> fromChatMessages(List<ChatMessage> chatMessages) {
         return chatMessages.stream()
                 .map(chatMessage -> new ChatMessageResponse(

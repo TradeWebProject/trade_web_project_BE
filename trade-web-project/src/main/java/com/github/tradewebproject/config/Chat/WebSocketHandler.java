@@ -13,6 +13,8 @@ import com.github.tradewebproject.repository.User.UserRepository;
 import com.github.tradewebproject.service.Chat.ChatMessageService;
 import com.github.tradewebproject.service.Jwt.JwtService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
@@ -30,6 +32,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 @Component
 public class WebSocketHandler extends TextWebSocketHandler {
+    private static final Logger logger = LoggerFactory.getLogger(WebSocketHandler.class);
 
     private final Map<Long, WebSocketSession> sessions = new ConcurrentHashMap<>();
     private final ObjectMapper objectMapper;
@@ -48,11 +51,11 @@ public class WebSocketHandler extends TextWebSocketHandler {
         this.objectMapper = objectMapper;
     }
 
+
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-        String token = session.getHandshakeHeaders().getFirst("Authorization");
-        if (token != null && token.startsWith("Bearer ")) {
-            token = token.substring(7);
+        String token = getTokenFromSession(session);
+        if (token != null) {
             User user = getUserFromToken(token);
             if (user != null) {
                 Long chatRoomId = getChatRoomIdFromSession(session); // 채팅방 ID를 세션에서 가져오는 메서드
@@ -80,7 +83,6 @@ public class WebSocketHandler extends TextWebSocketHandler {
             Long chatRoomId = (Long) session.getAttributes().get("chatRoomId");
             if (chatRoomId != null && isUserAuthorizedForChatRoom(user, chatRoomId)) {
                 Long senderId = user.getUserId();
-//                LocalDateTime sentTime = LocalDateTime.now();
                 ZonedDateTime utcTime = ZonedDateTime.now(ZoneId.of("UTC"));
                 ZonedDateTime koreaTime = utcTime.withZoneSameInstant(ZoneId.of("Asia/Seoul"));
                 LocalDateTime sentTime = koreaTime.toLocalDateTime(); // 한국 시간대로 변환된 현재 시간을 sentTime으로 설정
@@ -133,15 +135,23 @@ public class WebSocketHandler extends TextWebSocketHandler {
         }
     }
 
-
     private Long getChatRoomIdFromSession(WebSocketSession session) {
         // WebSocketSession의 URL에서 채팅방 ID를 추출하는 방법
         String query = session.getUri().getQuery();
-        if (query != null && query.startsWith("chatRoomId=")) {
-            return Long.valueOf(query.split("=")[1]);
+        if (query != null) {
+            // 쿼리 파라미터를 &로 분리하여 각 파라미터를 처리
+            String[] params = query.split("&");
+            for (String param : params) {
+                // 각 파라미터가 'chatRoomId='로 시작하는지 확인
+                if (param.startsWith("chatRoomId=")) {
+                    // 'chatRoomId=' 이후의 값을 Long으로 변환하여 반환
+                    return Long.valueOf(param.substring("chatRoomId=".length()));
+                }
+            }
         }
         return null;
     }
+
 
     private boolean isUserAuthorizedForChatRoom(User user, Long chatRoomId) {
         ChatRoom chatRoom = chatRoomRepository.findById(chatRoomId).orElse(null);
@@ -153,10 +163,15 @@ public class WebSocketHandler extends TextWebSocketHandler {
     }
 
     private String getTokenFromSession(WebSocketSession session) {
-        // WebSocketSession의 헤더에서 토큰을 추출하는 방법
-        List<String> authorization = session.getHandshakeHeaders().get("Authorization");
-        if (authorization != null && !authorization.isEmpty()) {
-            return authorization.get(0).replace("Bearer ", "");
+        String query = session.getUri().getQuery();
+        System.out.println("Query string: " + query);
+        if (query != null) {
+            String[] params = query.split("&");
+            for (String param : params) {
+                if (param.startsWith("token=")) {
+                    return param.substring(6); // "token=" 이후의 값
+                }
+            }
         }
         return null;
     }
