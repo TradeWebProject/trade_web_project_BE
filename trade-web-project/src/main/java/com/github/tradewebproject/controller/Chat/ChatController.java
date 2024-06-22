@@ -63,12 +63,12 @@ public class ChatController {
 
 
     @GetMapping("/rooms")
-    public ResponseEntity<List<ChatRoomResponse>> getChatRooms(Principal principal) {
+    public ResponseEntity<List<ChatRoomGetResponse>> getChatRooms(Principal principal) {
         String email = principal.getName();
         User user = getUserByEmail(email);
         Long userId = user.getUserId();
 
-        List<ChatRoomResponse> chatRooms = chatRoomService.findAllChatRoomsByUserId(userId);
+        List<ChatRoomGetResponse> chatRooms = chatRoomService.findAllChatRoomsByUserId(userId);
         return ResponseEntity.ok(chatRooms);
     }
 
