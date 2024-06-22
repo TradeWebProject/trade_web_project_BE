@@ -21,6 +21,8 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -78,7 +80,10 @@ public class WebSocketHandler extends TextWebSocketHandler {
             Long chatRoomId = (Long) session.getAttributes().get("chatRoomId");
             if (chatRoomId != null && isUserAuthorizedForChatRoom(user, chatRoomId)) {
                 Long senderId = user.getUserId();
-                LocalDateTime sentTime = LocalDateTime.now(); // 현재 시간을 sentTime으로 설정
+//                LocalDateTime sentTime = LocalDateTime.now();
+                ZonedDateTime utcTime = ZonedDateTime.now(ZoneId.of("UTC"));
+                ZonedDateTime koreaTime = utcTime.withZoneSameInstant(ZoneId.of("Asia/Seoul"));
+                LocalDateTime sentTime = koreaTime.toLocalDateTime(); // 한국 시간대로 변환된 현재 시간을 sentTime으로 설정
 
                 ChatMessageDto chatMessageDto = null;
                 switch (webSocketMessageDto.getMessageType()) {

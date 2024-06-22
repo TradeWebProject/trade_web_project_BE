@@ -58,6 +58,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/product/**").permitAll()
                         .requestMatchers("/images/**").permitAll()
 
+
                         .anyRequest().authenticated())
                 .addFilterBefore(new JwtAuthenticationFilter(jwtProvider, jwtService), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtExceptionFilter,JwtAuthenticationFilter.class);

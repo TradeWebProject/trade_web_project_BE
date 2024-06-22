@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -25,6 +26,8 @@ public class Token {
     private LocalDateTime refreshTokenTime;
     private Long userId;
     private String userEmail;
+    private List<String> userInterests;
+
 
     @Builder
     public Token(Long id,

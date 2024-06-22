@@ -90,7 +90,8 @@ public class UserController {
             String email = login.getEmail();
             String password = login.getUserPassword();
             Token token = userService.login(email, password);
-            return ResponseEntity.ok().body(ResponseToken.of(token));
+            UserDto userDto = userService.findUserByEmail(email);
+            return ResponseEntity.ok().body(ResponseToken.of(token, userDto.getUserInterests()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
