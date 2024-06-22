@@ -206,6 +206,6 @@ public class WebSocketHandler extends TextWebSocketHandler {
 
     private void sendNotification(User user, ChatMessageDto chatMessageDto) {
         // 알림 전송 로직 구현 (예: FCM, APNS, 이메일 등)
-        log.info("Send notification to user: " + user.getUserId() + " - Message: " + chatMessageDto.getContent());
+        log.info("Send notification to user: " + user.getUserId() + " - Message: " + chatMessageDto.getMessage());
     }
 }

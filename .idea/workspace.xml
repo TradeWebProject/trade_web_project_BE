@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03ede6b7-ecd5-42ba-8d7f-114079680bae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomGetResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/TradeWebProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatMessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatMessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatMessageDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/Chat/WebSocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/Chat/WebSocketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/Chat/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/Chat/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/ChatMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Chat/ChatMessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Chat/ChatMessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Chat/ChatRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Chat/ChatRoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Chat/ChatMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Chat/ChatMessageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +39,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "Spring Boot.TradeWebProjectApplication.executor": "Run",
-    "git-widget-placeholder": "feature/youngwoo/#83",
+    "git-widget-placeholder": "feature/youngwoo/#85",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>

@@ -17,9 +17,9 @@ public class ChatMessageDto {
     private Long senderId;
     private String senderNickName;
     private String senderImgUrl;
-    private String content;
+    private String message;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime sendTime;
+    private LocalDateTime sentTime;
     private MessageType messageType;
 }
