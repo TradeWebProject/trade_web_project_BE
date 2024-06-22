@@ -35,10 +35,10 @@ jobs:
         java-version: '17'
 
     # (3) Gradle build (Test 제외)
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+    - name: Set up Gradle
+      uses: gradle/gradle-build-action@v2
       with:
-        arguments: clean build -x test
+        gradle-version: '8.8'
 
     # (4) AWS 인증 (IAM 사용자 Access Key, Secret Key 활용)
     - name: Configure AWS credentials
