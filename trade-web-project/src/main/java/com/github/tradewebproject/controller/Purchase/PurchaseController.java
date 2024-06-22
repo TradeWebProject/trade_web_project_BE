@@ -22,7 +22,7 @@ public class PurchaseController {
 
     @GetMapping("/purchase/user/{userId}")
     @SecurityRequirement(name = "BearerAuth")
-    @Operation(summary = "사용자 ID로 상품 조회", description = "사용자 ID에 해당하는 사용자가 등록한 상품 목록을 조회합니다. 페이지와 정렬 방식에 따라 조회할 수 있습니다.")
+    @Operation(summary = "구매한 상품 조회", description = "사용자가 구매한 상품을 조회합니다.")
     public PurchasePageDto getPurchaseByUserId(
             @Parameter(description = "사용자 ID") @PathVariable Long userId,
             @Parameter(description = "페이지 번호 (1부터 시작)") @RequestParam(defaultValue = "1") int page,
