@@ -25,7 +25,7 @@ public interface  UserService {
     UserResponse getByEmail(String email);
     UserDto editUser(Long userId, EditUserDto editUserDto) throws IOException;
     ResponseEntity<?> getUserById(Long userId);
-
+    UserDto findUserByEmail(String email);
 
 
 }

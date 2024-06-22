@@ -135,6 +135,18 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public UserDto findUserByEmail(String email) {
+        User user = userJpaRepository.findByEmail(email);
+        return UserDto.builder()
+                .userId(user.getUserId())
+                .email(user.getEmail())
+                .userPassword(user.getUserPassword())
+                .userNickname(user.getUserNickname())
+                .userPhone(user.getUserPhone())
+                .userInterests(user.getUserInterests())
+                .build();
+    }
+
     public String logout(HttpServletRequest request, String email){
         try{
             Optional<String> refreshToken = jwtProvider.extractRefreshToken(request);

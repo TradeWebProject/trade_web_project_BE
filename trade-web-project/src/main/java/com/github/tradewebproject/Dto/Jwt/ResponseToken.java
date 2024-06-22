@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,23 +22,27 @@ public class ResponseToken {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime accessTokenTime;
     private Long userId;
+    private List<String> userInterests;
+
 
     @Builder
-    public ResponseToken(String userEmail, String accessToken, String refreshToken, LocalDateTime accessTokenTime , Long userId) {
+    public ResponseToken(String userEmail, String accessToken, LocalDateTime accessTokenTime , Long userId, List<String> userInterests) {
         this.userEmail = userEmail;
         this.accessToken = accessToken;
-//        this.refreshToken = refreshToken;
         this.accessTokenTime = accessTokenTime;
         this.userId = userId;
+        this.userInterests = userInterests;
+
     }
 
-    public static ResponseToken of(Token token){
+
+    public static ResponseToken of(Token token, List<String> userInterests) {
         return ResponseToken.builder()
                 .userEmail(token.getUserEmail())
                 .accessToken(token.getAccessToken())
-//                .refreshToken(token.getRefreshToken())
                 .accessTokenTime(token.getAccessTokenTime())
                 .userId(token.getUserId())
+                .userInterests(userInterests)
                 .build();
     }
 
