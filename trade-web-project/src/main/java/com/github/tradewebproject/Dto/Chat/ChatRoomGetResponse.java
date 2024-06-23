@@ -22,6 +22,10 @@ public class ChatRoomGetResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime latestMessageTime;
 
+    private String sellerImgUrl;
+    private String buyerImgUrl;
+
+
     // 생성자
     public ChatRoomGetResponse(ChatRoom chatRoom,String latestMessage,LocalDateTime latestMessageTime) {
         this.ChatRoomid = chatRoom.getChatRoomId();
@@ -31,6 +35,8 @@ public class ChatRoomGetResponse {
         this.buyerNickname = chatRoom.getBuyer().getUserNickname();
         this.latestMessage= latestMessage;
         this.latestMessageTime = latestMessageTime;
+        this.sellerImgUrl = "/images/" + chatRoom.getSeller().getUserImg();
+        this.buyerImgUrl = "/images/" + chatRoom.getBuyer().getUserImg();
 
     }
 
