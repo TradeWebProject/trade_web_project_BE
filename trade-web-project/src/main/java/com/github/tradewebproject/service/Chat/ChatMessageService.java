@@ -65,8 +65,8 @@ public class ChatMessageService {
         chatMessageDto.setSenderNickName(savedMessage.getSender().getUserNickname());
         String imageUrl = "/images/" + savedMessage.getSender().getUserImg();
         chatMessageDto.setSenderImgUrl(imageUrl);
-        chatMessageDto.setContent(savedMessage.getMessage());
-        chatMessageDto.setSendTime(savedMessage.getSentTime());
+        chatMessageDto.setMessage(savedMessage.getMessage());
+        chatMessageDto.setSentTime(savedMessage.getSentTime());
         chatMessageDto.setMessageType(savedMessage.getMessageType());
 
         return chatMessageDto;
