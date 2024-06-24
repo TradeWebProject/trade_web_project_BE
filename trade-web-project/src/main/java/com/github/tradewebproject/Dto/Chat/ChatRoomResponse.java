@@ -14,15 +14,17 @@ public class ChatRoomResponse {
     private Long buyerId;
     private String sellerNickname;
     private String buyerNickname;
+    private String productName;
 
 
     // 생성자
-    public ChatRoomResponse(ChatRoom chatRoom) {
+    public ChatRoomResponse(ChatRoom chatRoom, String productName) {
         this.ChatRoomid = chatRoom.getChatRoomId();
         this.sellerId = chatRoom.getSeller().getUserId();
         this.buyerId = chatRoom.getBuyer().getUserId();
         this.sellerNickname = chatRoom.getSeller().getUserNickname();
         this.buyerNickname = chatRoom.getBuyer().getUserNickname();
+        this.productName = productName;
 
     }
 

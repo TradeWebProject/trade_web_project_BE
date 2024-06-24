@@ -8,9 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/server.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomGetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomGetResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/Dto/Chat/ChatRoomResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/Chat/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/controller/Chat/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/ChatRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/domain/ChatRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Chat/ChatRoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/repository/Chat/ChatRoomRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Chat/ChatRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trade-web-project/src/main/java/com/github/tradewebproject/service/Chat/ChatRoomService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.TradeWebProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/youngwoo/#91&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/youngwoo/#94&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,7 +106,8 @@
       <option name="presentableId" value="Default" />
       <updated>1719146945865</updated>
       <workItem from="1719146948641" duration="1879000" />
-      <workItem from="1719226347289" duration="1038000" />
+      <workItem from="1719226347289" duration="1875000" />
+      <workItem from="1719233320363" duration="2414000" />
     </task>
     <servers />
   </component>

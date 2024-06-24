@@ -25,10 +25,11 @@ public class ChatRoomGetResponse {
     private String sellerImgUrl;
     private String buyerImgUrl;
     private Long productId;
+    private String productName;
 
 
     // 생성자
-    public ChatRoomGetResponse(ChatRoom chatRoom,String latestMessage,LocalDateTime latestMessageTime) {
+    public ChatRoomGetResponse(ChatRoom chatRoom,String latestMessage,LocalDateTime latestMessageTime, String productName) {
         this.ChatRoomid = chatRoom.getChatRoomId();
         this.sellerId = chatRoom.getSeller().getUserId();
         this.buyerId = chatRoom.getBuyer().getUserId();
@@ -39,6 +40,7 @@ public class ChatRoomGetResponse {
         this.sellerImgUrl = "/images/" + chatRoom.getSeller().getUserImg();
         this.buyerImgUrl = "/images/" + chatRoom.getBuyer().getUserImg();
         this.productId = chatRoom.getProductId();
+        this.productName = productName;
     }
 
 }

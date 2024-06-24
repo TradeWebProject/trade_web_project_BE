@@ -5,9 +5,11 @@ import com.github.tradewebproject.Dto.Chat.ChatRoomGetResponse;
 import com.github.tradewebproject.Dto.Chat.ChatRoomResponse;
 import com.github.tradewebproject.domain.ChatMessage;
 import com.github.tradewebproject.domain.ChatRoom;
+import com.github.tradewebproject.domain.Product;
 import com.github.tradewebproject.domain.User;
 import com.github.tradewebproject.repository.Chat.ChatMessageRepository;
 import com.github.tradewebproject.repository.Chat.ChatRoomRepository;
+import com.github.tradewebproject.repository.Product.ProductRepository;
 import com.github.tradewebproject.repository.User.UserJpaRepository;
 import com.github.tradewebproject.repository.User.UserRepository;
 import org.hibernate.Hibernate;
@@ -27,6 +29,9 @@ public class ChatRoomService {
     @Autowired
     private ChatMessageRepository chatMessageRepository;
 
+
+    @Autowired
+    private ProductRepository productRepository;
     @Autowired
     private ChatRoomRepository chatRoomRepository;
 
@@ -44,20 +49,11 @@ public class ChatRoomService {
         ChatRoom chatRoom = new ChatRoom();
         chatRoom.setSeller(seller);
         chatRoom.setBuyer(buyer);
-        chatRoom.setProductId(productId);  // ProductId를 ChatRoom에 저장
+        chatRoom.setProductId(productId);
 
         return chatRoomRepository.save(chatRoom);
     }
-//    public ChatRoom createChatRoom(Long sellerId, Long buyerId) {
-//        User seller = userRepository.findById(sellerId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Seller not found"));
-//        User buyer = userRepository.findById(buyerId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Buyer not found"));
-//
-//        ChatRoom chatRoom = new ChatRoom();
-//        chatRoom.setSeller(seller);
-//        chatRoom.setBuyer(buyer);
-//
-//        return chatRoomRepository.save(chatRoom);
-//    }
+
 
     public List<ChatRoomGetResponse> findAllChatRoomsByUserId(Long userId) {
         List<ChatRoom> chatRooms = chatRoomRepository.findAllBySeller_UserIdOrBuyer_UserId(userId, userId);
@@ -66,9 +62,22 @@ public class ChatRoomService {
                     Optional<ChatMessage> latestMessageOptional = chatMessageRepository.findTopByChatRoomOrderBySentTimeDesc(chatRoom);
                     String latestMessage = latestMessageOptional.map(ChatMessage::getMessage).orElse(null);
                     LocalDateTime latestMessageTime = latestMessageOptional.map(ChatMessage::getSentTime).orElse(null);
-                    return new ChatRoomGetResponse(chatRoom, latestMessage, latestMessageTime);
+
+                    // chatRoom.getProductId()가 null인지 확인
+                    Long productId = chatRoom.getProductId();
+                    if (productId == null) {
+                        // 로그를 추가하여 문제를 추적합니다.
+                        System.err.println("ChatRoom ID: " + chatRoom.getProductId() + " has null Product ID.");
+                        return new ChatRoomGetResponse(chatRoom, latestMessage, latestMessageTime, "Unknown Product");
+                    }
+
+                    String productName = productRepository.findById(productId)
+                            .map(Product::getProductName)
+                            .orElse("Unknown Product");  // productName 조회
+                    return new ChatRoomGetResponse(chatRoom, latestMessage, latestMessageTime, productName);  // productName 설정
                 })
                 .collect(Collectors.toList());
     }
+
 
 }
