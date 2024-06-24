@@ -57,9 +57,26 @@ public class ChatController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "자신의 물건은 채팅방을 만들 수 없습니다.");
         }
 
-        ChatRoom chatRoom = chatRoomService.createChatRoom(sellerId, buyerId);
+        ChatRoom chatRoom = chatRoomService.createChatRoom(sellerId, buyerId, request.getProductId());
         return ResponseEntity.ok(new ChatRoomResponse(chatRoom));
     }
+//    @PostMapping("/rooms")
+//    public ResponseEntity<ChatRoomResponse> createChatRoom(Principal principal, @RequestBody CreateChatRoomRequest request) {
+//        String email = principal.getName();
+//        User buyer = getUserByEmail(email);
+//        Long buyerId = buyer.getUserId();
+//
+//        Product product = productRepository.findById(request.getProductId())
+//                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
+//        Long sellerId = product.getUser().getUserId();
+//
+//        if (sellerId.equals(buyerId)) {
+//            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "자신의 물건은 채팅방을 만들 수 없습니다.");
+//        }
+//
+//        ChatRoom chatRoom = chatRoomService.createChatRoom(sellerId, buyerId);
+//        return ResponseEntity.ok(new ChatRoomResponse(chatRoom));
+//    }
 
 
     @GetMapping("/rooms")

@@ -12,5 +12,7 @@ import java.util.Optional;
 public interface ChatRoomRepository extends JpaRepository<ChatRoom, Long> {
     List<ChatRoom> findAllBySeller_UserIdOrBuyer_UserId(Long sellerId, Long buyerId);
 
+    boolean existsByProductIdAndBuyerUserId(Long productId, Long buyerId);
+
 //    Optional<ChatRoom> findBySeller_UserIdAndBuyer_UserId(Long sellerId, Long buyerId);
 }

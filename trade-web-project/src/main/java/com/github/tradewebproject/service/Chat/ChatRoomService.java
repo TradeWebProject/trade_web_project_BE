@@ -33,16 +33,31 @@ public class ChatRoomService {
     @Autowired
     private UserJpaRepository userRepository;
 
-    public ChatRoom createChatRoom(Long sellerId, Long buyerId) {
+    public ChatRoom createChatRoom(Long sellerId, Long buyerId, Long productId) {
         User seller = userRepository.findById(sellerId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Seller not found"));
         User buyer = userRepository.findById(buyerId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Buyer not found"));
+
+        if (chatRoomRepository.existsByProductIdAndBuyerUserId(productId, buyerId)) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "이미 해당 상품에 대한 채팅방이 존재합니다.");
+        }
 
         ChatRoom chatRoom = new ChatRoom();
         chatRoom.setSeller(seller);
         chatRoom.setBuyer(buyer);
+        chatRoom.setProductId(productId);  // ProductId를 ChatRoom에 저장
 
         return chatRoomRepository.save(chatRoom);
     }
+//    public ChatRoom createChatRoom(Long sellerId, Long buyerId) {
+//        User seller = userRepository.findById(sellerId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Seller not found"));
+//        User buyer = userRepository.findById(buyerId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Buyer not found"));
+//
+//        ChatRoom chatRoom = new ChatRoom();
+//        chatRoom.setSeller(seller);
+//        chatRoom.setBuyer(buyer);
+//
+//        return chatRoomRepository.save(chatRoom);
+//    }
 
     public List<ChatRoomGetResponse> findAllChatRoomsByUserId(Long userId) {
         List<ChatRoom> chatRooms = chatRoomRepository.findAllBySeller_UserIdOrBuyer_UserId(userId, userId);
