@@ -93,7 +93,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
                         chatMessageDto = chatMessageService.sendTextMessage(
                                 chatRoomId,
                                 senderId,
-                                webSocketMessageDto.getMessageContent(),
+                                webSocketMessageDto.getMessage(),
                                 sentTime
                         );
                         break;
