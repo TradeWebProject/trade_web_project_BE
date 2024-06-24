@@ -24,6 +24,7 @@ public class ChatRoomGetResponse {
 
     private String sellerImgUrl;
     private String buyerImgUrl;
+    private Long productId;
 
 
     // 생성자
@@ -37,7 +38,7 @@ public class ChatRoomGetResponse {
         this.latestMessageTime = latestMessageTime;
         this.sellerImgUrl = "/images/" + chatRoom.getSeller().getUserImg();
         this.buyerImgUrl = "/images/" + chatRoom.getBuyer().getUserImg();
-
+        this.productId = chatRoom.getProductId();
     }
 
 }
