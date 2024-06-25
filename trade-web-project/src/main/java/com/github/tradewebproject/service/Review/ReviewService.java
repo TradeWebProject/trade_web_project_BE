@@ -18,9 +18,11 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Service
@@ -110,6 +112,10 @@ public class ReviewService {
 
     @Transactional
     public SellerReviewPageDto getReviewsBySellerId(Long sellerId) {
+        // 판매자 정보 조회
+        User seller = userJpaRepository.findById(sellerId)
+                .orElseThrow(() -> new NoSuchElementException("판매자를 찾을 수 없습니다."));
+
         // 판매자가 판매한 상품 목록 조회
         List<Product> products = productRepository.findByUserUserId(sellerId);
 
@@ -123,7 +129,7 @@ public class ReviewService {
                         product.getProductName(),
                         review.getReviewDate(),
                         review.getUser().getUserNickname(),
-                        baseImageUrl + review.getUser().getUserImg(), // 이미지 경로에 base URL 추가
+                        baseImageUrl + review.getUser().getUserImg(),
                         review.getRating(),
                         review.getReviewContent(),
                         review.getReviewTitle()
@@ -134,11 +140,27 @@ public class ReviewService {
         // 총 판매 수 계산
         int totalSales = purchaseRepository.countBySellerId(sellerId);
 
-        // 별점 수 계산
-        int totalRatings = reviews.size();
+        // 총 리뷰 수 계산
+        int totalReviews = reviews.size();
+
+        // 별점 평균 계산
+        double averageRating = reviews.stream()
+                .mapToDouble(SellerReviewResponseDto::getRating)
+                .average()
+                .orElse(0.0);
+
+        DecimalFormat df = new DecimalFormat("#.##");
+        String formattedAverageRating = df.format(averageRating);
 
         // 결과를 새로운 DTO에 담아서 반환
-        return new SellerReviewPageDto(reviews, totalSales, totalRatings);
+        return new SellerReviewPageDto(
+                reviews,
+                totalSales,
+                totalReviews,
+                seller.getUserNickname(),
+                baseImageUrl + seller.getUserImg(),
+                Double.parseDouble(formattedAverageRating)
+        );
     }
 
 
