@@ -97,6 +97,22 @@ public class ReviewService {
                 .orElseThrow(() -> new RuntimeException("Product not found"));
 
         List<Review> reviews = reviewRepository.findByProduct(product);
+
+        if (reviews.isEmpty()) {
+            // 리뷰가 없는 경우에도 기본 DTO 반환
+            List<ReviewResponseDto> emptyReviewList = new ArrayList<>();
+            emptyReviewList.add(new ReviewResponseDto(
+                    null,
+                    null,
+                    productId,
+                    null,
+                    null,
+                    null,
+                    product.getUser().getUserId()
+            ));
+            return emptyReviewList;
+        }
+
         return reviews.stream()
                 .map(review -> new ReviewResponseDto(
                         review.getReviewTitle(),
