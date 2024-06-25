@@ -25,4 +25,5 @@ public class SellerReviewResponseDto {
     private Double rating;
     private String reviewContent;
     private String reviewTitle;
+
 }
