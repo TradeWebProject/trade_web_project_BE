@@ -27,7 +27,7 @@
 > * feat : 새 기능 추가
 > * fix : 기능 수정
 > * hotFix : 급하게 치명적인 버그를 고쳐야 하는 경우
-> * invaild : 잘못된 부분이 있어보임
+> * invaild : 잘못된 부분
 > * perf : 성능 개선
 > * refactor : 코드 리팩토링
 > * remove : 파일 삭제
