@@ -1,4 +1,4 @@
-<h1>📖 거래 중개 사이트 - RemarketHub </h1>
+![image](https://github.com/user-attachments/assets/81e480c9-a404-4d82-a485-3a622bf952c7)<h1>📖 거래 중개 사이트 - RemarketHub </h1>
 
 
 ***
@@ -14,7 +14,8 @@
 <h1>📋 ERD</h1>
 
    
-[ERD.pdf](https://github.com/user-attachments/files/20588213/ERD.pdf)
+![Image](https://github.com/user-attachments/assets/c4f35824-4586-4376-8a39-0c702f926969)
+
 ***
 
 <h1>🛠 주요 기능</h1>
