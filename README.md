@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/81e480c9-a404-4d82-a485-3a622bf952c7)<h1>📖 거래 중개 사이트 - RemarketHub </h1>
+<h1>📖 거래 중개 사이트 - RemarketHub </h1>
 
 
 ***
