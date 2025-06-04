@@ -14,8 +14,7 @@
 <h1>📋 ERD</h1>
 
    
-<img src="https://github.com/mmmv41/shopping-mall-product/assets/156222089/b1763923-e224-4012-8f06-6a6e3707c56d" width="700" height="350">
-
+[ERD.pdf](https://github.com/user-attachments/files/20588213/ERD.pdf)
 ***
 
 <h1>🛠 주요 기능</h1>
